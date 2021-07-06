@@ -1,6 +1,6 @@
 <h2 > Teleunidos: Video Streaming Application </h2>
-landing: https://ancient-beach-81378.herokuapp.com
-Demo: http://stormy-escarpment-10471.herokuapp.com
+<p> Landing: https://ancient-beach-81378.herokuapp.com </p>
+<p> Demo: http://stormy-escarpment-10471.herokuapp.com </p>
 
 <p>Front end Code Base </p>
 
