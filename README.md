@@ -1,8 +1,9 @@
 <h2 > Teleunidos: Video Streaming Application </h2>
+
+<p>Front end demo Code Base </p>
 <p> Landing: https://ancient-beach-81378.herokuapp.com </p>
 <p> Demo: http://stormy-escarpment-10471.herokuapp.com </p>
 
-<p>Front end Code Base </p>
 
 <p> Teleunidos is a Video Streaming application </p>
 <p> A Video CMS  dashboard that help users to upload, view and manage tv shows and  video content with the option to record and convert live streaming to video on demand, upload and link videos from other social media like facebook, manage video advertisings, and track miutes watch by show and in total 
