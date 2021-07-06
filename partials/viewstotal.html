@@ -1,0 +1,107 @@
+<div class="landingmenu2 row navbar navbar-default navbar-fixed-top">
+    <p class="col-md-3 menulogo2">
+    <img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+    <a href="#/dash" class="colwhite2">
+        &nbsp {{nombre}} 
+    </a>
+    </p>
+</div>
+
+<div class="col-md-2 sidebar">
+    <ul class="nav">
+        <li>
+        <a href="#/dash" class="collll">
+        <span class="glyphicon glyphicon-dashboard   text-info">
+        </span> Dashboard</a>
+        </li>
+        <li>
+        <a class="colll" href="#/misprogramas/{{thecanal}}">
+        <span class="glyphicon glyphicon-picture text-warning"></span> TV Shows</a>
+        </li>
+        <li ng-show="!productor" >
+        <a class="colll" href="#/elprograma4">
+        <span class="glyphicon glyphicon-play-circle text-danger"></span> Upload link</a>
+        </li>
+        <li><a class="colll" href="#/miscampanas/{{thecanal}}">
+        <span class="glyphicon  glyphicon-record text-info"></span> Advertisement </a>
+        </li>
+        <li><a class="colll" href="#/minutos/{{thecanal}}">
+        <span class="glyphicon glyphicon-signal text-success">
+        </span> Analytics </a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/minutos/{{thecanal}}">Time Watch</a>
+            </li>
+            <li><a class="colll" href="#/viewstotal/{{thecanal}}">Total Watch</a>
+            </li>
+            <li><a class="colll" href="#/users">Users</a>
+            </li>
+            </ul>
+        <li><a class="colll" href="#/profile">
+        <span class="glyphicon  glyphicon-envelope text-info"></span> Account</a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/profile"> Profile</a>
+            </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+<div class="col-md-offset-2 col-md-10 main">
+    <div class="center-form panel ">
+        <div class="panel-body">
+            <div class="col-md-5 re">  
+                <h2>{{ thecanal }}</h2>
+                <h3>  {{month}} {{year}}   </h3>
+                <div class="row ">
+                <select class="form-control  col-xs-1" name="gender" ng-model="months" ng-change="change()" required >
+                    <option value="">Mes:</option>
+                    <option value="01">Enero</option>
+                    <option value="02">Febreo</option>
+                    <option value="03">Marzo</option>
+                    <option value="04">Abril</option>
+                    <option value="05">Mayo</option>
+                    <option value="06">Junio</option>
+                    <option value="07">Julio</option>
+                    <option value="08">Agosto</option>
+                    <option value="09">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+                <br><br>
+                <select class="form-control  col-xs-1" name="gender" ng-model="years" ng-change="change()" required >
+                    <option value="">Año:</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+                <br><br><br><br>
+                <img src="files/upload.svg" class="gop" height="" alt="">
+                </div>
+            </div>
+            <div class="col-md-5">  
+                <h3 class="text-center newtext2"><b>Total minutes : {{toview}}</b></h3>
+                <p class="text-center newtext"> <b> El Consultorio:  </b>{{consultorio}} minutos </p>
+                <p class="text-center newtext"> <b> Videos: </b>{{videos}}  minutos </p>
+                <p class="text-center newtext"> <b>Noticias:  </b>{{noticias}} minutos </p>
+                <p class="text-center newtext"> <b>Fermentados: </b> {{fermentados}} minutos </p>
+                <p class="text-center newtext"> <b>Geopolitica:  </b>{{geopolitica}} minutos </p>
+                <p class="text-center newtext"> <b>Plataforma:  </b>{{plataforma}} minutos </p>
+                <p class="text-center newtext"> <b>Informa TVX: </b>{{informa}} minutos </p>
+                <p class="text-center newtext"> <b>Remind:  </b>{{remind}} minutos </p>
+                <p class="text-center newtext"> <b>Encuentro: </b> {{encuentro}} minutos </p>
+                <p class="text-center newtext"> <b>Pop Time:  </b>{{poptime}} minutos </p>
+                <br><br><br><br><br>
+            </div>
+        </div>
+    </div>
+</div>

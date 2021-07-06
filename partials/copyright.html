@@ -1,0 +1,771 @@
+<div class="landingmenu2 row navbar navbar-default 
+navbar-fixed-top">
+<p class="col-md-3 menulogo2">
+<img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+<a href="#/dash" class="colwhite2">
+    &nbsp TELEUNIDOS
+</a></p>
+<div class="col-md-7">
+
+</div>
+</div>
+
+
+
+<div class="col-md-2 sidebar">
+<ul class="nav">
+<br>
+<li>
+<a href="#/dash" class="colll">
+<span class="glyphicon glyphicon-dashboard   text-info">
+</span> Dashboard</a>
+</li>
+<li>
+<a class="colll" href="#/copyright">
+<span 
+class="glyphicon glyphicon-play-circle text-warning"></span> Control de Copyrigth</a>
+</li>
+<li>
+<a class="colll" href="#/schedules">
+<span 
+class="glyphicon glyphicon-film text-success"></span> Horarios</a>
+</li>
+<li>
+<a class="colll" href="#/misprogramas"><span class="glyphicon glyphicon-picture text-danger"></span> Mis Programas</a>
+</li>
+
+<li><a class="colll" href="#/views/{{theview}}">
+<span class="glyphicon glyphicon-signal text-primary">
+</span> Mis Datos</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/views/{{theview}}">Minutos Vistos</a>
+</li>
+<li><a class="colll" href="#/devices/{{theview}}">Dispositivos</a>
+</li>
+<li><a class="colll" href="#/plays/{{theview}}">Reproducciones</a>
+</li>
+<li><a class="colll" href="#/viewstotal">Consumo total
+</a></li>
+<li><a class="colll" href="#/users">Usuarios</a>
+</li>
+</ul>
+<li><a class="colll" href="#/profile"><span class="glyphicon  glyphicon-envelope text-info"></span> Mi cuenta</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/profile"> Perfil</a>
+</li>
+<li><a class="colll" href="#/pagos"> Pagos </a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<div class="col-md-offset-4 col-md-8 main">
+
+
+<ul class="row">
+
+<div class="theul col-md-8 col-xs-offset-1">
+
+      <form method="post" ng-submit="updateProfile()">
+        <h1 class="text-center"> Control de copyrigth</h1>
+
+<!--<h2 class="text-center"> Lunes</h2> -->
+  
+
+<p class="text-center"> 
+Selecciona si el programa es Nacional o Internacional, 
+desmarca la caja para que su alternativa se habilite
+</p><br>
+
+<br>
+<table class="table">
+  <tr>
+    <th><strong>Programa </strong></th>
+    <th><strong>Nacional</strong></th> 
+    <th><strong>Internacional</strong></th>
+
+  </tr>
+  <tr>
+    <td>
+    <label>
+  {{programas[0].programa}}
+  </label>
+    </td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[0].nacional" 
+    ng-disabled="programas[0].internacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[0].internacional" 
+    ng-disabled="programas[0].nacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <label>
+  {{programas[1].programa}}
+  </label>
+    </td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[1].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[1].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr>
+
+  <tr>
+    <td><label>{{programas[2].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[2].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[2].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr>
+  <tr>
+    <td><label>{{programas[3].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[3].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[3].internacional"> 
+    </label>
+  </div>      
+    </td>
+   
+  </tr>
+  <tr>
+    <td><label>{{programas[4].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[4].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[4].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr>
+  <tr>
+    <td><label>{{programas[5].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[5].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[5].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr>
+  <tr>
+    <td><label>{{programas[6].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[6].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[6].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr>
+  <tr>
+    <td><label>{{programas[7].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[7].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[7].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr>
+  <tr>
+    <td><label>{{programas[8].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[8].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[8].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr>
+  <tr>
+    <td><label>{{programas[9].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[9].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[9].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr>
+  <tr>
+    <td><label>{{programas[10].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[10].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[10].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[11].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[11].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[11].internacional"> 
+    </label>
+  </div>      
+    </td> 
+  </tr> 
+  <tr>
+    <td><label>{{programas[12].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[12].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[12].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[13].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[13].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[13].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[14].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[14].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[14].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[15].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[15].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[15].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[16].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[16].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[16].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[17].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[17].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[17].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[18].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[18].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[18].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[19].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[19].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[19].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[20].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[20].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[20].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[21].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[21].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[21].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[22].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[22].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[22].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[23].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[23].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[23].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[24].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[24].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[24].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[25].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[25].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[25].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[26].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[26].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[26].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[27].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[27].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[27].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[28].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[28].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[28].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[29].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[29].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[29].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[30].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[30].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[30].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[31].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[31].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[31].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[32].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[32].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[32].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[33].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[33].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[33].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[34].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[34].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[34].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[35].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[35].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[35].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[36].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[36].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[36].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>{{programas[37].programa}} </label></td>
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[37].nacional"> 
+    </label>
+    </div>
+    </td> 
+    <td>
+    <div class="checkbox">
+    <label>
+    <input type="checkbox" ng-model="programas[37].internacional"> 
+    </label>
+  </div>      
+    </td>
+  </tr> 
+</table>
+
+
+
+        <div class="form-group">
+        <button class="btn btn-success col-xs-3">
+        Actualizar</button>
+        </form>
+        </div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div><!--second-->
+
+

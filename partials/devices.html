@@ -1,0 +1,106 @@
+<div class="landingmenu2 row navbar navbar-default 
+navbar-fixed-top">
+<p class="col-md-3 menulogo2">
+<img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+<a href="#/dash" class="colwhite2">
+    &nbsp TELEUNIDOS
+</a></p>
+<div class="col-md-7">
+
+</div>
+</div>
+
+
+
+<div class="col-md-2 sidebar">
+<ul class="nav">
+<li>
+<a href="#/dash" class="collll">
+<span class="glyphicon glyphicon-dashboard   text-info">
+</span> Dashboard</a>
+</li>
+<!-- <li>
+<a class="colll" href="#/copyright">
+<span 
+class="glyphicon glyphicon-play-circle text-warning"></span> Control de Copyrigth</a>
+</li> -->
+<li>
+<a class="colll" href="#/misprogramas/{{thecanal}}"><span class="glyphicon glyphicon-picture
+ text-warning"></span> Mis Programas</a>
+</li>
+<li>
+<a class="colll" href="#/schedules/{{thecanal}}">
+<span 
+class="glyphicon glyphicon-list-alt text-primary"></span> Horarios</a>
+</li>
+<li>
+<a class="colll" href="#/micanal"><span class="glyphicon glyphicon-play-circle text-danger"></span> Transmision</a>
+</li>
+<li><a class="colll" href="#/miscampanas/{{thecanal}}"><span class="glyphicon  glyphicon-record text-info"></span> Publicidad</a></li>
+
+<li><a class="colll" href="#/minutos/{{thecanal}}">
+<span class="glyphicon glyphicon-signal text-success">
+</span> Mis Datos</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/minutos/{{thecanal}}">Minutos Vistos</a>
+</li>
+<!-- <li><a class="colll" href="#/devices/{{theview}}">Dispositivos</a>
+</li>
+<li><a class="colll" href="#/plays/{{theview}}">Reproducciones</a>
+</li> -->
+<li><a class="colll" href="#/viewstotal/{{thecanal}}">Consumo total
+</a></li>
+<li><a class="colll" href="#/users">Usuarios</a>
+</li>
+</ul>
+<li><a class="colll" href="#/profile"><span class="glyphicon  glyphicon-envelope text-info"></span> Mi cuenta</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/profile"> Perfil</a>
+</li>
+<li><a class="colll" href="#/pagos/{{thecanal}}"> Pagos </a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+
+<div class="col-md-offset-2 col-md-10 main">
+
+    <div class="center-form panel ">
+
+      <div class="panel-body">
+
+
+
+  <div class="col-md-5 re">  
+
+
+<h2>{{canal }}  </h2>
+
+  <h3>  {{month}} {{year}}   </h3>
+  <h4> 01 - {{date}}  </h4>
+  <h4> Total minutos Vistos: {{toview}}</h4>
+<div class="row ">
+  <select class="form-control  col-xs-1" name="gender" ng-model="months" ng-change="change()" required >
+  <option value="">Mes:</option>
+  <option value="09">Septiembre</option>
+  <option value="10">Octubre</option>
+  <option value="11">Noviembre</option>
+  </select>
+</div>
+    </div>
+
+
+  <div class="col-md-5">  
+
+    <h4 class="text-center mi"> Minutos vistos por Dispositivo </h4>
+    <svg width="960" height="400" class="push"></svg>
+
+  </div>
+
+
+</div>
+</div>
+</div>

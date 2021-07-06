@@ -1,0 +1,142 @@
+<div class="landingmenu2 row navbar navbar-default 
+navbar-fixed-top">
+<p class="col-md-3 menulogo2">
+<img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+<a href="#/dash" class="colwhite2">
+    &nbsp TELEUNIDOS
+</a></p>
+<div class="col-md-7">
+
+</div>
+</div>
+
+
+
+<div class="col-md-2 sidebar">
+<ul class="nav">
+<li>
+<a href="#/dash" class="collll">
+<span class="glyphicon glyphicon-dashboard   text-info">
+</span> Dashboard</a>
+</li>
+<!-- <li>
+<a class="colll" href="#/copyright">
+<span 
+class="glyphicon glyphicon-play-circle text-warning"></span> Control de Copyrigth</a>
+</li> -->
+<li>
+<a class="colll" href="#/misprogramas/{{thecanal}}"><span class="glyphicon glyphicon-picture
+ text-warning"></span> Mis Programas</a>
+</li>
+<li ng-show="!productor">
+<a class="colll" href="#/schedules/{{thecanal}}">
+<span 
+class="glyphicon glyphicon-list-alt text-primary"></span> Horarios</a>
+</li>
+<li ng-show="!productor">
+<a class="colll" href="#/{{thecanal}}"><span class="glyphicon glyphicon-play-circle text-danger"></span> Transmision</a>
+</li>
+<li><a class="colll" href="#/miscampanas/{{thecanal}}"><span class="glyphicon  glyphicon-record text-info"></span> Publicidad</a></li>
+
+<li><a class="colll" href="#/minutos/{{thecanal}}">
+<span class="glyphicon glyphicon-signal text-success">
+</span> Mis Datos</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/minutos/{{thecanal}}">Minutos Vistos</a>
+</li>
+<!-- <li><a class="colll" href="#/devices/{{theview}}">Dispositivos</a>
+</li>
+<li><a class="colll" href="#/plays/{{theview}}">Reproducciones</a>
+</li> -->
+<li><a class="colll" href="#/viewstotal/{{thecanal}}">Consumo total
+</a></li>
+<li><a class="colll" href="#/users">Usuarios</a>
+</li>
+</ul>
+<li><a class="colll" href="#/profile"><span class="glyphicon  glyphicon-envelope text-info"></span> Mi cuenta</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/profile"> Perfil</a>
+</li>
+<li><a class="colll" ng-show="youtuber" ng-show="terminos"  href="#/acuerdo"> Convenio</a></li>
+<li><a class="colll" ng-show="youtuber" ng-show="!terminos" href="#/convenio"> Convenio</a></li>
+<li><a class="colll" href="#/pagos/{{thecanal}}"> Pagos </a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+
+<div class="col-md-offset-2 col-md-10 main">
+
+    <div class="center-form panel ">
+
+      <div class="panel-body">
+
+
+
+  <div class="col-md-5 re">  
+
+
+  <h2>{{canal }}  </h2>
+  <h3>  {{month}} {{year}}   </h3>
+  <h4> Total minutos vistos en Teleunidos: {{toview}}</h4>
+   <h4 > Minutos vistos de mi canal: {{mychannel}} </h4>
+  <h4> Pago de este mes: ${{myroyalti}} </h4>
+
+<div class="row ">
+
+
+  <select class="form-control  col-xs-1" name="gender" ng-model="months" ng-change="change()" required >
+  <option value="">Mes:</option>
+  <option value="01">Enero</option>
+  <option value="02">Febreo</option>
+  <option value="03">Marzo</option>
+  <option value="04">Abril</option>
+  <option value="05">Mayo</option>
+  <option value="06">Junio</option>
+  <option value="07">Julio</option>
+  <option value="08">Agosto</option>
+  <option value="09">Septiembre</option>
+  <option value="10">Octubre</option>
+  <option value="11">Noviembre</option>
+  <option value="12">Diciembre</option>
+  </select>
+
+<br><br><br>
+  <select class="form-control  col-xs-1" name="gender" ng-model="years" ng-change="change()" required >
+  <option value="">Año:</option>
+  <option value="2018">2018</option>
+  <option value="2019">2019</option>
+  <option value="2020">2020</option>
+  <option value="2021">2021</option>
+  <option value="2022">2022</option>
+  <option value="2023">2023</option>
+  <option value="2024">2024</option>
+  <option value="2025">2025</option>
+  </select>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+
+
+  <div class="col-md-5">  
+
+    <h4 class="text-center mi"> Total de usuarios activos: {{totuseres}} </h4>
+
+    <svg width="960" height="400" class="push"></svg>
+
+  </div>
+
+
+</div>
+</div>
+</div>

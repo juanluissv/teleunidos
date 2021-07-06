@@ -1,0 +1,109 @@
+
+<div class="col-md-2 sidebar">
+  <ul class="nav">
+<br>
+    <li><a href="#/dash" class="colll"><span class="glyphicon glyphicon-dashboard   text-info"></span> Dashboard</a></li>
+    <li><a class="colll" href="#/broadcast"><span class="glyphicon glyphicon-bullhorn text-danger"></span> Transmitir en vivo </a></li>
+    <li><a class="colll" href="#/misprogramas"><span class="glyphicon glyphicon-picture text-primary"></span> Mis Videos</a></li>
+    <li><a class="colll" href="">
+    <span class="glyphicon glyphicon-signal text-success"></span> Mis Datos</a>
+      <ul class="nav nav-second-level">
+        <li><a class="colll" href="#/views/{{theview}}">Minutos Vistos</a></li>
+        <li><a class="colll" href="#/plays/{{theview}}">Reproducciones</a></li>
+        <li><a class="colll" href="#/devices/{{theview}}">Dispositivos</a></li>
+        <li><a class="colll" href="#/viewstotal">Consumo total</a></li>
+        <li><a class="colll" href="#/users">Usuarios</a></li>
+      </ul>
+    <li><a class="colll" href=""><span class="glyphicon  glyphicon-envelope text-warning"></span> Mi cuenta</a>
+      <ul class="nav nav-second-level">
+        <li><a class="colll" href="#/profile"> Perfil</a></li>
+        <li><a class="colll" href="partials/login.html"> Pagos </a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="col-md-offset-3 col-md-6 main">
+
+    <div class="center-form panel ">
+
+      <div class="panel-body">
+
+      <br><br>
+<br><br>
+
+
+<a ng-click="callingvid()" class="btn btn-info">delete first 10 videos</a>
+
+
+<br><br>
+
+<a ng-click="callingvid2()" class="btn btn-info">delete second 10 videos</a>
+
+
+<br><br>
+
+
+<br><br>
+
+<a ng-click="geturl()" class="btn btn-info">get 1-10 url</a>
+
+<br><br>
+
+<a ng-click="geturl2()" class="btn btn-info">get 10-20 url</a>
+
+
+
+<br><br>
+
+<a ng-click="geturl3()" class="btn btn-info">get 20-30 url</a>
+
+
+<br><br>
+
+
+<!-- <form method="post" ng-submit="geturl()" name="loginForm">
+
+<input class="form-control" type="number" name="numero inicial" ng-model="youtube.uno" 
+placeholder="numero inicial" required autofocus>
+<br><br>
+<input class="form-control" type="number" name="numero final" ng-model="youtube.dos" 
+placeholder="numero final" required autofocus>
+
+<br><br>
+
+<button type="submit"  class="btn btn-lg  btn-block btn-success">get url</button>
+</form>
+ -->
+
+
+
+
+<br><br>
+<a ng-click="myur()" class="btn btn-info">upload 10 videos</a>
+
+<br><br><br>
+<ul>
+
+
+<li class="lines col-md-4" 
+ng-repeat="video in results" 
+>
+
+<a href="#/video/{{video.mediaid}}">
+
+ <img class="videoImg" 
+ng-src="{{ video.image }}">
+
+</a>
+
+</li>
+</ul>
+
+
+
+
+</div>
+</div>
+
+</div>

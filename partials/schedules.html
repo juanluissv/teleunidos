@@ -1,0 +1,638 @@
+<div class="landingmenu2 row navbar navbar-default 
+navbar-fixed-top">
+<p class="col-md-3 menulogo2">
+<img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+<a href="#/dash" class="colwhite2">
+    &nbsp {{nombre}} 
+</a></p>
+<div class="col-md-7">
+
+</div>
+</div>
+
+
+
+<div class="col-md-2 sidebar">
+<ul class="nav">
+<li>
+<a href="#/dash" class="collll">
+<span class="glyphicon glyphicon-dashboard   text-info">
+</span> Dashboard</a>
+</li>
+<!-- <li>
+<a class="colll" href="#/copyright">
+<span 
+class="glyphicon glyphicon-play-circle text-warning"></span> Control de Copyrigth</a>
+</li> -->
+<li>
+<a class="colll" href="#/misprogramas/{{thecanal}}"><span class="glyphicon glyphicon-picture
+ text-warning"></span> Mis Programas</a>
+</li>
+<li ng-show="!productor"><a class="colll" href="#/schedules/{{thecanal}}">
+<span 
+class="glyphicon glyphicon-list-alt text-primary"></span> Horarios</a>
+</li>
+<li ng-show="!productor" >
+<a class="colll" href="#/{{thecanal}}"><span class="glyphicon glyphicon-play-circle text-danger"></span> Transmision</a>
+</li>
+<li><a class="colll" href="#/miscampanas/{{thecanal}}"><span class="glyphicon  glyphicon-record text-info"></span> Publicidad</a></li>
+
+<li><a class="colll" href="#/minutos/{{thecanal}}">
+<span class="glyphicon glyphicon-signal text-success">
+</span> Mis Datos</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/minutos/{{thecanal}}">Minutos Vistos</a>
+</li>
+<!-- <li><a class="colll" href="#/devices/{{theview}}">Dispositivos</a>
+</li>
+<li><a class="colll" href="#/plays/{{theview}}">Reproducciones</a>
+</li> -->
+<li><a class="colll" href="#/viewstotal/{{thecanal}}">Consumo total
+</a></li>
+<li><a class="colll" href="#/users">Usuarios</a>
+</li>
+</ul>
+<li><a class="colll" href="#/profile"><span class="glyphicon  glyphicon-envelope text-info"></span> Mi cuenta</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/profile"> Perfil</a>
+</li>
+
+<li><a class="colll" ng-show="youtuber"  ng-show="terminos"  href="#/acuerdo"> Convenio</a></li>
+<li><a class="colll" ng-show="youtuber"  ng-show="!terminos" href="#/convenio"> Convenio</a></li>
+
+<!-- <li><a class="colll" href="#/pagos/{{thecanal}}"> Pagos </a>
+</li> -->
+</ul>
+</li>
+</ul>
+</div>
+
+
+
+
+<div class="col-md-offset-2 col-md-10 main">
+
+
+<ul class="row">
+
+<div class="theul col-md-8 col-xs-offset-1">
+
+      <form method="post" ng-submit="updateProfile()">
+        <h2 class="text-center">  Programacion TVX Internacional</h2>
+
+<!--<h2 class="text-center"> Lunes</h2> -->
+  
+
+<p class="text-center"> 
+Horarios de Lunes a Domingo</p><br>
+<!-- <div  class="form-group mikot">
+<select  ng-model="dia"  ng-change="getProfile()" class=" col-md-6">
+  <option value="lunes">Lunes</option>
+  <option value="martes">Martes</option>
+  <option value="miercoles">Miercoles</option>
+  <option value="jueves">Jueves</option>
+  <option value="viernes">Viernes</option>
+  <option value="sabado">Sabado</option>
+  <option value="domingo">Domingo</option>
+</select>   
+</div> -->
+<br>
+<table class="table">
+  <tr>
+    <th><strong>Hora de Inicio</strong></th> 
+    <th><strong>Hora final</strong></th>
+    <th><strong>Programa</strong></th>
+  </tr>
+  <tr>
+
+    <td>
+  <label>
+  {{programas[0].horainicio}}
+  </label>
+</td> 
+    <td>
+  <label>
+  {{programas[0].horafinal}}
+  </label>      
+    </td>
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[0].programafinal">
+<option 
+value="Cierre" ng-model="programafinales[0].programafinal">
+Cierre</option>  
+</select>
+  </td>
+  </tr>
+  <tr>
+    <td><label>{{programas[1].horainicio}}</label></td> 
+    <td><label>{{programas[1].horafinal}}</label></td>
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[1].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>
+    </td>
+  </tr>
+<tr>
+    <td><label>  {{programas[2].horainicio}}</label></td> 
+    <td><label>  {{programas[2].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[2].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>  
+    </td>
+  </tr>
+  <tr>
+    <td><label>  {{programas[3].horainicio}}</label></td> 
+    <td><label>  {{programas[3].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[3].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>   
+</select>   
+    </td>
+  </tr>
+  <tr>
+    <td><label>  {{programas[4].horainicio}}</label></td> 
+    <td><label>  {{programas[4].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[4].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>   
+    </td>
+  </tr>
+  <tr>
+    <td><label>  {{programas[5].horainicio}}</label></td> 
+    <td><label>  {{programas[5].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[5].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>     
+    </td>
+  </tr>
+  <tr>
+    <td><label>  {{programas[6].horainicio}}</label></td> 
+    <td><label>  {{programas[6].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[6].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr>
+  <tr>
+    <td><label>  {{programas[7].horainicio}}</label></td> 
+    <td><label>  {{programas[7].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[7].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr>
+  <tr>
+    <td><label>  {{programas[8].horainicio}}</label></td> 
+    <td><label>  {{programas[8].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[8].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>     
+    </td>
+  </tr>
+  <tr>
+    <td><label>  {{programas[9].horainicio}}</label></td> 
+    <td><label>  {{programas[9].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[9].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>       
+    </td>
+  </tr>
+  <tr>
+    <td><label>  {{programas[10].horainicio}}</label></td> 
+    <td><label>  {{programas[10].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[10].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>     
+    </td>
+  </tr> 
+  <tr>
+    <td><label>  {{programas[11].horainicio}}</label></td> 
+    <td><label>  {{programas[11].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[11].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr> 
+  <tr>
+    <td><label>  {{programas[12].horainicio}}</label></td> 
+    <td><label>  {{programas[12].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[12].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr>    
+  <tr>
+    <td><label>  {{programas[13].horainicio}}</label></td> 
+    <td><label>  {{programas[13].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[13].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[14].horainicio}}</label></td> 
+    <td><label>  {{programas[14].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[14].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[15].horainicio}}</label></td> 
+    <td><label>  {{programas[15].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[15].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[16].horainicio}}</label></td> 
+    <td><label>  {{programas[16].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[16].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[17].horainicio}}</label></td> 
+    <td><label>  {{programas[17].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[17].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[18].horainicio}}</label></td> 
+    <td><label>  {{programas[18].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[18].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[19].horainicio}}</label></td> 
+    <td><label>  {{programas[19].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[19].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[20].horainicio}}</label></td> 
+    <td><label>  {{programas[20].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[20].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[21].horainicio}}</label></td> 
+    <td><label>  {{programas[21].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[21].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[22].horainicio}}</label></td> 
+    <td><label>  {{programas[22].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[22].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option> 
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[23].horainicio}}</label></td> 
+    <td><label>  {{programas[23].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[23].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[24].horainicio}}</label></td> 
+    <td><label>  {{programas[24].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[24].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>   
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[25].horainicio}}</label></td> 
+    <td><label>  {{programas[25].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[25].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>   
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[26].horainicio}}</label></td> 
+    <td><label>  {{programas[26].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[26].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[27].horainicio}}</label></td> 
+    <td><label>  {{programas[27].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[27].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[28].horainicio}}</label></td> 
+    <td><label>  {{programas[28].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[28].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[29].horainicio}}</label></td> 
+    <td><label>  {{programas[29].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[29].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[30].horainicio}}</label></td> 
+    <td><label>  {{programas[30].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[30].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[31].horainicio}}</label></td> 
+    <td><label>  {{programas[31].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[31].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>   
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[32].horainicio}}</label></td> 
+    <td><label>  {{programas[32].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[32].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[33].horainicio}}</label></td> 
+    <td><label>  {{programas[33].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[33].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[34].horainicio}}</label></td> 
+    <td><label>  {{programas[34].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[34].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[35].horainicio}}</label></td> 
+    <td><label>  {{programas[35].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[35].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>  
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[36].horainicio}}</label></td> 
+    <td><label>  {{programas[36].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[36].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>   
+</select>      
+    </td>
+  </tr> 
+    <tr>
+    <td><label>  {{programas[37].horainicio}}</label></td> 
+    <td><label>  {{programas[37].horafinal}}</label></td> 
+    <td>
+<select class="form-control" name="sele1" id="sele1" 
+ng-model="programafinales[37].programafinal">
+<option ng-repeat="option in datum track by $index" 
+value="{{option.name}}">
+{{option.name}}
+</option>   
+</select>      
+    </td>
+  </tr> 
+
+
+</table>
+
+
+<br>
+
+        <div class="form-group">
+        <button class="btn btn-primary col-xs-offset-5 col-xs-3">
+        Guardar</button>
+        <br><br><br>
+<p class="text-center"> 
+Por favor notifica a admin para  confirmar cambios en las aplicaciones
+</p><br>        
+        </form>
+        </div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div><!--second-->
+
+

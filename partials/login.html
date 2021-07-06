@@ -1,0 +1,48 @@
+<div class="landingmenu row">
+    <p class="col-md-3 menulogo">
+    <a href="#/home" class="colwhite">TELEUNIDOS</a></p>
+    <div class="col-md-7">
+    </div>
+</div>
+
+<div class="row">
+    <div class="center-form panel login">
+        <div class="panel-body">
+            <h2 class="text-center logtext2">LOGIN</h2>
+            <form method="post" ng-submit="login()" name="loginForm">
+
+            <div class="form-group has-feedback movit3 col-md-5">
+                <input 
+                    class="form-control" 
+                    type="text" 
+                    name="email" 
+                    ng-model="user.user_email" 
+                    placeholder="Email" 
+                    required 
+                    autofocus>
+                <span class="ion-at form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback movit3 col-md-5">
+            <input 
+                class="form-control" 
+                type="password" 
+                name="password" 
+                ng-model="user.user_pass" 
+                placeholder="Password" 
+                required>
+            <span class="ion-key form-control-feedback"></span>
+            </div>
+
+            <div class="form-group movit3 col-md-5">
+            <button 
+                type="submit" 
+                ng-disabled="loginForm.$invalid" 
+                class="btn btn-block btn-info ">
+                Log in
+            </button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

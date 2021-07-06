@@ -1,0 +1,159 @@
+<div class="landingmenu2 row navbar navbar-default navbar-fixed-top">
+    <p class="col-md-3 menulogo2">
+    <img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+    <a href="#/dash" class="colwhite2">
+        &nbsp {{nombre}} 
+    </a>
+    </p>
+</div>
+
+<div class="col-md-2 sidebar">
+    <ul class="nav">
+        <li>
+        <a href="#/dash" class="collll">
+        <span class="glyphicon glyphicon-dashboard   text-info">
+        </span> Dashboard</a>
+        </li>
+        <li>
+        <a class="colll" href="#/misprogramas/{{thecanal}}">
+        <span class="glyphicon glyphicon-picture text-warning"></span> TV Shows</a>
+        </li>
+        <li ng-show="!productor" >
+        <a class="colll" href="#/elprograma4">
+        <span class="glyphicon glyphicon-play-circle text-danger"></span> Upload link</a>
+        </li>
+        <li><a class="colll" href="#/miscampanas/{{thecanal}}">
+        <span class="glyphicon  glyphicon-record text-info"></span> Advertisement </a>
+        </li>
+        <li><a class="colll" href="#/minutos/{{thecanal}}">
+        <span class="glyphicon glyphicon-signal text-success">
+        </span> Analytics </a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/minutos/{{thecanal}}">Time Watch</a>
+            </li>
+            <li><a class="colll" href="#/viewstotal/{{thecanal}}">Total Watch</a>
+            </li>
+            <li><a class="colll" href="#/users">Users</a>
+            </li>
+            </ul>
+        <li><a class="colll" href="#/profile">
+        <span class="glyphicon  glyphicon-envelope text-info"></span> Account</a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/profile"> Profile</a>
+            </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+<div class="col-xs-offset-2 col-xs-10 main">
+<br><br>
+	<div class="row">
+		<div class="col-xs-3 col-xs-6">
+			<div class="panel panel-info">
+			<div class="panel-heading">
+			<div class="row">
+			<div class="col-xs-3">
+			<span class="glyphicon glyphicon-eye-open"></span>
+			</div>
+			<div class="col-xs-9 text-right">
+			<div class="huge"></div>
+			<div>Time Watch</div>			
+			<a href="#/minutos/{{thecanal}}">
+			</div>
+			</div>
+			</div>
+			<div class="panel-footer">
+			<span class="pull-left">View Details</span>
+			<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			<div class="clearfix"></div>
+			</div>
+			</a>
+			</div>
+		</div>
+		<div class="col-xs-3 col-xs-6">
+			<div class="panel panel-danger">
+			<div class="panel-heading">
+			<div class="row">
+			<div class="col-xs-3">
+			<span class="glyphicon glyphicon-facetime-video"></span>
+			</div>
+			<div class="col-xs-9 text-right">
+			<div class="huge"></div>
+			<div>TV shows</div>
+			</div>
+			</div>
+			</div>
+			<a href="#/misprogramas/{{thecanal}}">
+			<div class="panel-footer">
+			<span class="pull-left">View Details</span>
+			<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			<div class="clearfix"></div>
+			</div>
+			</a>
+			</div>
+		</div>
+		<div class="col-xs-3 col-xs-6">
+			<div class="panel panel-success">
+			<div class="panel-heading">
+			<div class="row">
+			<div class="col-xs-3">
+			<i class="glyphicon glyphicon-user"></i>
+			</div>
+			<div class="col-xs-9 text-right">
+			<div class="huge"></div>
+			<div>Users</div>
+			</div>
+			</div>
+			</div>
+			<a href="#users">
+			<div class="panel-footer">
+			<span class="pull-left">View Details</span>
+			<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			<div class="clearfix"></div>
+			</div>
+			</a>
+			</div>
+		</div>		
+		<div class="col-xs-3 col-xs-6 bord">
+			<div class="panel panel-primary">
+			<div class="panel-heading">
+			<div class="row">
+			<div class="col-xs-3">
+			<i class="glyphicon glyphicon-phone"></i>
+			</div>
+			<div class="col-xs-9 text-right">
+			<div class="huge"></div>
+			<div>Upload</div>
+			</div>
+			</div>
+			</div>
+			<a href="#/elprograma4">
+			<div class="panel-footer">
+			<span class="pull-left">View Details</span>
+			<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			<div class="clearfix"></div>
+			</div>
+			</a>
+			</div>
+		</div>
+	</div>
+	<!-- /.row -->
+	<br><br>
+    <div class="col-md-6">
+        <div id="chart" class="pushhg"></div>
+    </div>
+
+	<div class="col-md-6">
+    	<img src="files/upload.svg" class="gop" height="" alt="">
+	    <h4><a href="#/viewstotal/{{thecanal}}" class="movit">Total Watch</a></h4>
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>

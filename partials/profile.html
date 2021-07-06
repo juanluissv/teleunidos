@@ -1,0 +1,106 @@
+<div class="landingmenu2 row navbar navbar-default navbar-fixed-top">
+    <p class="col-md-3 menulogo2">
+    <img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+    <a href="#/dash" class="colwhite2">
+        &nbsp {{nombre}} 
+    </a>
+    </p>
+</div>
+<div class="col-md-2 sidebar">
+    <ul class="nav">
+        <li>
+        <a href="#/dash" class="collll">
+        <span class="glyphicon glyphicon-dashboard   text-info">
+        </span> Dashboard</a>
+        </li>
+        <li>
+        <a class="colll" href="#/misprogramas/{{thecanal}}">
+        <span class="glyphicon glyphicon-picture text-warning"></span> TV Shows</a>
+        </li>
+        <li ng-show="!productor" >
+        <a class="colll" href="#/elprograma4">
+        <span class="glyphicon glyphicon-play-circle text-danger"></span> Upload link</a>
+        </li>
+        <li><a class="colll" href="#/miscampanas/{{thecanal}}">
+        <span class="glyphicon  glyphicon-record text-info"></span> Advertisement </a>
+        </li>
+        <li><a class="colll" href="#/minutos/{{thecanal}}">
+        <span class="glyphicon glyphicon-signal text-success">
+        </span> Analytics </a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/minutos/{{thecanal}}">Time Watch</a>
+            </li>
+            <li><a class="colll" href="#/viewstotal/{{thecanal}}">Total Watch</a>
+            </li>
+            <li><a class="colll" href="#/users">Users</a>
+            </li>
+            </ul>
+        <li><a class="colll" href="#/profile">
+        <span class="glyphicon  glyphicon-envelope text-info"></span> Account</a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/profile"> Profile</a>
+            </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="col-md-offset-2 col-md-10 main">
+    <ul class="row">
+        <div class="theul col-xs-5 col-xs-offset-1">
+            <form method="post" ng-submit="updateProfile()">
+            <h3> Contact Information </h3>
+            <div class="form-group">
+            <label class="control-label"><i class="ion-person"></i> First Name</label>
+            <input type="text" class="form-control" ng-model="user.firstName" />
+            </div>
+            <div class="form-group">
+            <label class="control-label"><i class="ion-person"></i> Last Name</label>
+            <input type="text" class="form-control" ng-model="user.lastName" />
+            </div>
+            <div class="form-group">
+            <label class="control-label"><i class="ion-person"></i> Job Title</label>
+            <input type="text" class="form-control" ng-model="user.position" />
+            </div>
+            <div class="form-group">
+            <label class="control-label"><i class="ion-person"></i> Phone Number</label>
+            <input type="text" class="form-control" ng-model="user.phone" />
+            </div>
+            <div class="form-group">
+            <label class="control-label"><i class="ion-at"></i> Email Address</label>
+            <input type="email" class="form-control" ng-model="user.user_email" />
+            </div>
+            <h3> Informacion de canal </h3>
+            <div class="form-group">
+            <label class="control-label"><i class="ion-at"></i> Channel</label>
+            <input type="text" class="form-control" ng-model="user.channel" />
+            </div>
+            <div class="form-group">
+            <label class="control-label"><i class="ion-at"></i> Country</label>
+            <input type="text" class="form-control" ng-model="user.country" />
+            </div>
+            <div class="form-group">
+            <label class="control-label"><i class="ion-at"></i> City</label>
+            <input type="text" class="form-control" ng-model="user.city" required />
+            </div>
+            <div class="form-group">
+            <label class="control-label"><i class="ion-at"></i> Description</label>
+            <textarea class="form-control" rows="3" name="description" ng-model="user.description"></textarea>
+            </div>        
+            <div class="form-group">
+            <button class="btn btn-success col-xs-3">Update</button>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="theul">
+  <br><br><br><br>
+  <a class="btn btn-primary col-xs-offset-1 col-xs-3" href="/#/logout">
+    <h4>Exit my Account</h4></a>
+  </div>
+  </div>
+</div>

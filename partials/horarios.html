@@ -1,0 +1,240 @@
+<div class="landingmenu2 row navbar navbar-default 
+navbar-fixed-top">
+<p class="col-md-3 menulogo2">
+<!-- <img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt=""> -->
+<a href="#/dash" class="colwhite2">
+TELEUNIDOS
+</a></p>
+<div class="col-md-7">
+
+</div>
+</div>
+
+
+<div class="col-md-2 sidebar">
+  <ul class="nav">
+<br>
+    <li><a href="#/dash" class="colll"><span class="glyphicon glyphicon-dashboard   text-info"></span> Dashboard</a></li>
+    <li><a class="colll" href="#/broadcast"><span class="glyphicon glyphicon-bullhorn text-danger"></span> Transmitir en vivo </a></li>
+    <li><a class="colll" href="#/misprogramas"><span class="glyphicon glyphicon-picture text-primary"></span> Mis Videos</a></li>
+    <li><a class="colll" href="#/views/{{theview}}">
+    <span class="glyphicon glyphicon-signal text-success"></span> Mis Datos</a>
+      <ul class="nav nav-second-level">
+        <li><a class="colll" href="#/views/{{theview}}">Minutos Vistos</a></li>
+        <li><a class="colll" href="#/devices/{{theview}}">Dispositivos</a></li>
+        <li><a class="colll" href="#/plays/{{theview}}">Reproducciones</a></li>
+        <li><a class="colll" href="#/viewstotal">Consumo total</a></li>
+        <li><a class="colll" href="#/users">Usuarios</a></li>
+      </ul>
+    <li><a class="colll" href="#/profile"><span class="glyphicon  glyphicon-envelope text-warning"></span> Mi cuenta</a>
+      <ul class="nav nav-second-level">
+        <li><a class="colll" href="#/profile"> Perfil</a></li>
+        <li><a class="colll" href="#/pagos"> Pagos </a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<div class="col-md-offset-2 col-md-10 main">
+
+
+<ul class="row">
+
+<div class="theul col-md-8 col-xs-offset-1">
+
+      <form method="post" ng-submit="updateProfile()">
+        <h1 class="text-center"> creacion de horarios</h1>
+
+<!--<h2 class="text-center"> Lunes</h2> -->
+  
+
+<p class="text-center">horarios de programacion de el canal</p><br>
+<div  class="form-group mikot">
+<select  ng-model="dia"  ng-change="getProfile()" class=" col-md-6">
+  <option value="lunes">Lunes</option>
+  <option value="martes">Martes</option>
+  <option value="miercoles">Miercoles</option>
+  <option value="jueves">Jueves</option>
+  <option value="viernes">Viernes</option>
+  <option value="sabado">Sabado</option>
+  <option value="domingo">Domingo</option>
+</select>   
+</div>
+<br>
+<table class="table">
+  <tr>
+    <th><strong>Programa</strong></th>
+    <th><strong>Hora de Inicio</strong></th> 
+    <th><strong>Hora final</strong></th>
+  </tr>
+  <tr>
+    <td>
+    <label>
+  {{programas[0].programa}}
+  </label>
+    </td>
+    <td>
+  <label>
+  {{programas[0].horainicio}}
+  </label>
+</td> 
+    <td>
+  <label>
+  {{programas[0].horafinal}}
+  </label>      
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <label>
+  {{programas[1].programa}}
+  </label>
+    </td>
+    <td>
+  <label>
+  {{programas[1].horainicio}}
+  </label>
+</td> 
+    <td>
+  <label>
+  {{programas[1].horafinal}}
+  </label>      
+    </td>
+  </tr>
+
+  <tr>
+    <td><label>{{programas[2].programa}} </label></td>
+    <td><label>  {{programas[2].horainicio}}</label></td> 
+    <td><label>  {{programas[2].horafinal}}</label></td> 
+  </tr>
+  <tr>
+    <td><label>{{programas[3].programa}} </label></td>
+    <td><label>  {{programas[3].horainicio}}</label></td> 
+    <td><label>  {{programas[3].horafinal}}</label></td> 
+
+  </tr>
+  <tr>
+    <td><label>{{programas[4].programa}} </label></td>
+    <td><label>  {{programas[4].horainicio}}</label></td> 
+    <td><label>  {{programas[4].horafinal}}</label></td> 
+  </tr>
+  <tr>
+    <td><label>{{programas[5].programa}} </label></td>
+    <td><label>  {{programas[5].horainicio}}</label></td> 
+    <td><label>  {{programas[5].horafinal}}</label></td> 
+  </tr>
+  <tr>
+    <td><label>{{programas[6].programa}} </label></td>
+    <td><label>  {{programas[6].horainicio}}</label></td> 
+    <td><label>  {{programas[6].horafinal}}</label></td> 
+  </tr>
+  <tr>
+    <td><label>{{programas[7].programa}} </label></td>
+    <td><label>  {{programas[7].horainicio}}</label></td> 
+    <td><label>  {{programas[7].horafinal}}</label></td> 
+  </tr>
+  <tr>
+    <td><label>{{programas[8].programa}} </label></td>
+    <td><label>  {{programas[8].horainicio}}</label></td> 
+    <td><label>  {{programas[8].horafinal}}</label></td> 
+  </tr>
+  <tr>
+    <td><label>{{programas[9].programa}} </label></td>
+    <td><label>  {{programas[9].horainicio}}</label></td> 
+    <td><label>  {{programas[9].horafinal}}</label></td> 
+  </tr>
+  <tr>
+    <td><label>{{programas[10].programa}} </label></td>
+    <td><label>  {{programas[10].horainicio}}</label></td> 
+    <td><label>  {{programas[10].horafinal}}</label></td> 
+  </tr> 
+  <tr>
+    <td><label>{{programas[11].programa}} </label></td>
+    <td><label>  {{programas[11].horainicio}}</label></td> 
+    <td><label>  {{programas[11].horafinal}}</label></td> 
+
+  </tr> 
+  <tr>
+    <td><label>{{programas[12].programa}} </label></td>
+    <td><label>  {{programas[12].horainicio}}</label></td> 
+    <td><label>  {{programas[12].horafinal}}</label></td> 
+  </tr>    
+  <tr>
+    <td><label>{{programas[13].programa}} </label></td>
+    <td><label>  {{programas[13].horainicio}}</label></td> 
+    <td><label>  {{programas[13].horafinal}}</label></td> 
+  </tr>  
+  <tr>
+    <td><label>{{programas[14].programa}} </label></td>
+    <td><label>  {{programas[14].horainicio}}</label></td> 
+    <td><label>  {{programas[14].horafinal}}</label></td> 
+  </tr>  
+    <tr>
+    <td><label>{{programas[15].programa}} </label></td>
+    <td><label>  {{programas[15].horainicio}}</label></td> 
+    <td><label>  {{programas[15].horafinal}}</label></td> 
+  </tr>  
+  </tr>  
+    <tr>
+    <td><label>{{programas[16].programa}} </label></td>
+    <td><label>  {{programas[16].horainicio}}</label></td> 
+    <td><label>  {{programas[16].horafinal}}</label></td> 
+  </tr>  
+  </tr>  
+    <tr>
+    <td><label>{{programas[17].programa}} </label></td>
+    <td><label>  {{programas[17].horainicio}}</label></td> 
+    <td><label>  {{programas[17].horafinal}}</label></td> 
+  </tr>  
+  </tr>  
+    <tr>
+    <td><label>{{programas[18].programa}} </label></td>
+    <td><label>  {{programas[18].horainicio}}</label></td> 
+    <td><label>  {{programas[18].horafinal}}</label></td> 
+  </tr>  
+  </tr>  
+    <tr>
+    <td><label>{{programas[19].programa}} </label></td>
+    <td><label>  {{programas[19].horainicio}}</label></td> 
+    <td><label>  {{programas[19].horafinal}}</label></td> 
+  </tr>  
+  </tr>  
+    <tr>
+    <td><label>{{programas[20].programa}} </label></td>
+    <td><label>  {{programas[20].horainicio}}</label></td> 
+    <td><label>  {{programas[20].horafinal}}</label></td> 
+  </tr>  
+  </tr>  
+    <tr>
+    <td><label>{{programas[21].programa}} </label></td>
+    <td><label>  {{programas[21].horainicio}}</label></td> 
+    <td><label>  {{programas[21].horafinal}}</label></td> 
+  </tr>  
+
+
+
+</table>
+
+
+
+        <div class="form-group">
+        <button class="btn btn-success col-xs-3">
+        Actualizar</button>
+        </form>
+        </div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div><!--second-->
+
+

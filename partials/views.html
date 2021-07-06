@@ -1,0 +1,118 @@
+<div class="landingmenu2 row navbar navbar-default navbar-fixed-top">
+    <p class="col-md-3 menulogo2">
+    <img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+    <a href="#/dash" class="colwhite2">
+        &nbsp {{nombre}} 
+    </a>
+    </p>
+</div>
+
+<div class="col-md-2 sidebar">
+    <ul class="nav">
+        <li>
+        <a href="#/dash" class="collll">
+        <span class="glyphicon glyphicon-dashboard   text-info">
+        </span> Dashboard</a>
+        </li>
+        <li>
+        <a class="colll" href="#/misprogramas/{{thecanal}}">
+        <span class="glyphicon glyphicon-picture text-warning"></span> TV Shows</a>
+        </li>
+        <li ng-show="!productor" >
+        <a class="colll" href="#/elprograma4">
+        <span class="glyphicon glyphicon-play-circle text-danger"></span> Upload link</a>
+        </li>
+        <li><a class="colll" href="#/miscampanas/{{thecanal}}">
+        <span class="glyphicon  glyphicon-record text-info"></span> Advertisement </a>
+        </li>
+        <li><a class="colll" href="#/minutos/{{thecanal}}">
+        <span class="glyphicon glyphicon-signal text-success">
+        </span> Analytics </a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/minutos/{{thecanal}}">Time Watch</a>
+            </li>
+            <li><a class="colll" href="#/viewstotal/{{thecanal}}">Total Watch</a>
+            </li>
+            <li><a class="colll" href="#/users">Users</a>
+            </li>
+            </ul>
+        <li><a class="colll" href="#/profile">
+        <span class="glyphicon  glyphicon-envelope text-info"></span> Account</a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/profile"> Profile</a>
+            </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="col-md-offset-2 col-md-10 main">
+    <div class="center-form panel ">
+        <div class="panel-body">
+            <div class="col-md-4">  
+                <h4>{{ elprograma }} </h4>
+                <h4> Total minutes watch: {{toview}}</h4>
+            </div>
+            <div class="col-md-offset-3 col-md-2">  
+                <select class="form-control" name="gender" ng-model="months" ng-change="change()" required>
+                <option value="">Mes:</option>
+                <option value="01">Enero</option>
+                <option value="02">Febrero</option>
+                <option value="03">Marzo</option>
+                <option value="04">Abril</option>
+                <option value="05">Mayo</option>
+                <option value="06">Junio</option>
+                <option value="07">Julio</option>
+                <option value="08">Agosto</option>
+                <option value="09">Septiembre</option>
+                <option value="10">Octubre</option>
+                <option value="11">Noviembre</option>
+                <option value="12">Diciembre</option>
+                </select>
+            </div>  
+        <div class=" col-md-2">  
+            <select class="form-control" name="gender" ng-model="years" ng-change="change()" required>
+            <option value="">Año:</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            </select>
+        </div>
+        <br><br><br><br>
+        <svg width="960" height="400" class=""></svg>
+        <div id="viz"></div>
+      </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br>
+
+<div class="col-md-offset-4 col-md-6">
+<br><br>
+  <div class="panel panel-primary">
+    <div class="panel-heading text-center">Minutos Vistos:  {{month}} {{year}} </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr class="">
+                <th class="text-center">
+                <strong>Fecha<strong></th>
+                <th class="text-center">
+                <strong>Minutos</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="visto in fechas" class="">
+                <td class="text-center textoo">{{ visto.date }}</td>
+                <td class="text-center textoo">{{ visto.view }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

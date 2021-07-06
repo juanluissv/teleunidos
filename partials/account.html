@@ -1,0 +1,255 @@
+<div class="landingmenu row">
+<p class="col-md-3 menulogo">
+<!-- <img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt=""> -->
+<a href="#/home" class="colwhite">
+TELEUNIDOS
+</a>
+</p>
+<div class="col-md-7">
+
+</div>
+</div>
+
+  <div class="row">
+    <div class="center-form panel col-md-offset-2 col-md-8">
+      <div class="panel-body">
+
+        <h2 class="text-center logtext2">Informacion de contacto</h2>
+
+        <form method="post" ng-submit="signup()" name="signupForm">
+
+
+          <div class="form-group has-feedback col-md-12" ng-class="{ 'has-error' : signupForm.email.$invalid && signupForm.email.$dirty }">
+            <input class="form-control" type="email" id="email" name="email" ng-model="user.user_email" placeholder="Email" required>
+            <span class="ion-at form-control-feedback"></span>
+            <div class="help-block text-danger" ng-if="signupForm.email.$dirty" ng-messages="signupForm.email.$error">
+              <div ng-message="required">Your email address is required.</div>
+              <div ng-message="pattern">Your email address must  be invalid.</div>
+            </div>
+          </div>
+
+
+          <div class="form-group has-feedback col-md-6" 
+          ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
+            <input class="form-control" type="text" name="displayName" ng-model="user.firstName" 
+            placeholder="First Name" required autofocus>
+            <span class="ion-person form-control-feedback"></span>
+            <div class="help-block text-danger" ng-if="signupForm.displayName.$dirty" ng-messages="signupForm.displayName.$error">
+              <div ng-message="required">You must enter your first name.</div>
+            </div>
+          </div>
+
+          <div class="form-group has-feedback col-md-6" ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
+          <input class="form-control " type="text" name="lastName" ng-model="user.lastName" placeholder="Last Name" required autofocus>
+          <span class="ion-person form-control-feedback"></span>
+          <div class="help-block text-danger" ng-if="signupForm.displayName.$dirty" ng-messages="signupForm.displayName.$error">
+          <div ng-message="required">You must enter your last name.</div>
+          </div>
+          </div>
+
+          <div class="form-group has-feedback col-md-6" ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
+          <input class="form-control " 
+          type="text" name="phone" id="phone"
+          ng-model="user.phone" 
+          placeholder="Phone Number" required autofocus>
+          <span class="ion-person form-control-feedback"></span>
+          <div class="help-block text-danger" ng-if="signupForm.displayName.$dirty" ng-messages="signupForm.displayName.$error">
+          <div ng-message="required">You must enter your Phone Number</div>
+          </div>
+          </div>
+
+          <div class="form-group has-feedback col-md-6" ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
+         <input class="form-control " 
+          type="text" name="title" id="title"
+          ng-model="user.position" 
+          placeholder="Job Title" required autofocus>
+          <span class="ion-person form-control-feedback"></span>
+          <div class="help-block text-danger" ng-if="signupForm.displayName.$dirty" ng-messages="signupForm.displayName.$error">
+          <div ng-message="required">You must enter your Job Title</div>
+          </div>
+          </div>
+
+
+
+
+  
+          <div class="form-group has-feedback col-md-6" ng-class="{ 'has-error' : signupForm.password.$invalid && signupForm.password.$dirty }">
+            <input password-strength class="form-control " type="password" name="password" ng-model="user.user_pass" placeholder="Password" required>
+            <span class="ion-key form-control-feedback"></span>
+            <div class="help-block text-danger" ng-if="signupForm.password.$dirty" ng-messages="signupForm.password.$error">
+              <div ng-message="required">Password is required.</div>
+            </div>
+          </div>
+
+          <div class="form-group has-feedback col-md-6" ng-class="{ 'has-error' : signupForm.confirmPassword.$invalid && signupForm.confirmPassword.$dirty }">
+            <input password-match="user.user_pass" class="form-control " type="password" name="confirmPassword" ng-model="confirmPassword" placeholder="Confirm Password">
+            <span class="ion-key form-control-feedback"></span>
+            <div class="help-block text-danger" ng-if="signupForm.confirmPassword.$dirty" ng-messages="signupForm.confirmPassword.$error">
+              <div ng-message="compareTo">Password must match.</div>
+            </div>
+          </div>
+
+
+
+
+   
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br>
+
+
+
+<h2 class="text-center logtext2">Informacion del Canal </h2>
+<br>
+
+          <div class="form-group has-feedback col-md-12" 
+          ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
+            <input class="form-control" type="text" 
+            name="channel" ng-model="user.channel" 
+            id="channel"
+            placeholder="Channel Name" required autofocus>
+            <span class="ion-person form-control-feedback"></span>
+            <div class="help-block text-danger" ng-if="signupForm.displayName.$dirty" ng-messages="signupForm.displayName.$error">
+              <div ng-message="required">You must enter your channel name.</div>
+            </div>
+          </div>
+
+
+
+
+          <div class="form-group has-feedback col-md-6" 
+          ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
+            <input class="form-control" type="text" 
+            name="country" id="country" 
+            ng-model="user.country" 
+            placeholder="Country" required autofocus>
+            <span class="ion-person form-control-feedback"></span>
+            <div class="help-block text-danger" ng-if="signupForm.displayName.$dirty" ng-messages="signupForm.displayName.$error">
+              <div ng-message="required">You must enter your country</div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="form-group has-feedback col-md-6" 
+          ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
+            <input class="form-control" type="text" 
+            name="city" id="city" 
+            ng-model="user.city" 
+            placeholder="City" required autofocus>
+            <span class="ion-person form-control-feedback"></span>
+            <div class="help-block text-danger" ng-if="signupForm.displayName.$dirty" ng-messages="signupForm.displayName.$error">
+              <div ng-message="required">You must enter your city</div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="form-group has-feedback col-md-6" 
+          ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
+		 <textarea class="form-control" rows="3" 
+		 name="description" ng-model="user.description" 
+            placeholder="Description" required autofocus>></textarea>
+            <span class="ion-person form-control-feedback"></span>
+            <div class="help-block text-danger" ng-if="signupForm.displayName.$dirty" ng-messages="signupForm.displayName.$error">
+              <div ng-message="required">You must enter description.</div>
+            </div>
+          </div>
+
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<h2 class="text-center logtext2">Conecta Youtube </h2>
+<p> Si  tienes los videos de tus programas de tv en  youtube Teleunidos te da una opccion muy practica y  facil  de ingresar los url de los canales de youtube o playlist y nosotros nos encargaremos de crear cada programa bajo tu perfil y actualizar los videos diariamente desde tu contenido de youtube <p>
+<br>
+
+
+ <div class="checkbox">
+    <label>
+      <input ng-model="checked" ng-init="checked=false" type="checkbox"> Click aqui para agregar  urls de youtube
+    </label>
+  </div>
+
+
+<!-- 
+<label>Click me: 
+<input type="checkbox" ng-model="checked" ng-init="checked=false" /></label><br/>
+ -->
+
+
+<span ng-if="checked" class="animate-if">
+          
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url1" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url2" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url3" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url4" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url5" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url6" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url7" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url8" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url9" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+<div class="form-group col-md-12">
+<input class="form-control" type="text" name="channel" ng-model="user.url10" 
+id="channel" placeholder="Url de canal o playlist de youtube"  autofocus>
+</div>
+
+</span>
+
+
+
+<button type="submit" class=" col-md-12btn btn-lg btn-block btn-primary">Aplicar</button>
+
+
+</form>
+
+
+
+
+
+</div></div>
+
+
+  </div>

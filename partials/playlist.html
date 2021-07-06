@@ -1,0 +1,90 @@
+
+<div class="col-md-2 sidebar">
+  <ul class="nav">
+<br>
+    <li><a href="#/dash" class="colll"><span class="glyphicon glyphicon-dashboard   text-info"></span> Dashboard</a></li>
+    <li><a class="colll" href="#/broadcast"><span class="glyphicon glyphicon-bullhorn text-danger"></span> Transmitir en vivo </a></li>
+    <li><a class="colll" href="#/misprogramas"><span class="glyphicon glyphicon-picture text-primary"></span> Mis Videos</a></li>
+    <li><a class="colll" href="">
+    <span class="glyphicon glyphicon-signal text-success"></span> Mis Datos</a>
+      <ul class="nav nav-second-level">
+        <li><a class="colll" href="#/views/{{theview}}">Minutos Vistos</a></li>
+        <li><a class="colll" href="#/plays/{{theview}}">Reproducciones</a></li>
+        <li><a class="colll" href="#/devices/{{theview}}">Dispositivos</a></li>
+        <li><a class="colll" href="#/viewstotal">Consumo total</a></li>
+        <li><a class="colll" href="#/users">Usuarios</a></li>
+      </ul>
+    <li><a class="colll" href=""><span class="glyphicon  glyphicon-envelope text-warning"></span> Mi cuenta</a>
+      <ul class="nav nav-second-level">
+        <li><a class="colll" href="#/profile"> Perfil</a></li>
+        <li><a class="colll" href="partials/login.html"> Pagos </a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<div class="col-md-offset-2 col-md-10 main">
+
+
+
+<div class="row">
+
+<div class="theul col-xs-5 col-xs-offset-1">
+<br>
+      <form method="post" ng-submit="createplaylist()">
+        <h3> Create playlist </h3>
+
+        <div class="form-group">
+          <input type="text" class="form-control" ng-model="playlist.elements" placeholder="elements" />
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" ng-model="playlist.canal" placeholder="canal" />
+        </div>
+
+        <br><p> only in the first playlist</p>
+<!--         <div class="form-group">
+          <input type="text" class="form-control" ng-model="playlist.first" placeholder="enter one" />
+        </div> -->
+
+
+          <div class="form-group">
+          <input type="number" class="form-control" ng-model="playlist.number" placeholder="numero" />
+        </div>
+
+
+        <div class="form-group">
+        <button class="btn btn-success col-xs-3">
+        Crear</button>
+        </form>
+        </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+

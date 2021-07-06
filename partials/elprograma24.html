@@ -1,0 +1,313 @@
+<div class="landingmenu2 row navbar navbar-default 
+navbar-fixed-top">
+<p class="col-md-3 menulogo2">
+<img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+<a href="#/dash" class="colwhite2">
+    &nbsp TELEUNIDOS
+</a></p>
+<div class="col-md-7">
+
+</div>
+</div>
+
+
+
+<div class="col-md-2 sidebar">
+<ul class="nav">
+<li>
+<a href="#/dash" class="collll">
+<span class="glyphicon glyphicon-dashboard   text-info">
+</span> Dashboard</a>
+</li>
+<!-- <li>
+<a class="colll" href="#/copyright">
+<span 
+class="glyphicon glyphicon-play-circle text-warning"></span> Control de Copyrigth</a>
+</li> -->
+<li>
+<a class="colll" href="#/misprogramas/{{thecanal}}"><span class="glyphicon glyphicon-picture
+ text-warning"></span> Mis Programas</a>
+</li>
+<li>
+<a class="colll" href="#/schedules">
+<span 
+class="glyphicon glyphicon-list-alt text-primary"></span> Horarios</a>
+</li>
+<li>
+<a class="colll" href="#/{{thecanal}}"><span class="glyphicon glyphicon-play-circle text-danger"></span> Transmision</a>
+</li>
+<li><a class="colll" href="#/miscampanas"><span class="glyphicon  glyphicon-record text-info"></span> Publicidad</a></li>
+
+<li><a class="colll" href="#/minutos">
+<span class="glyphicon glyphicon-signal text-success">
+</span> Mis Datos</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/minutos">Minutos Vistos</a>
+</li>
+<!-- <li><a class="colll" href="#/devices/{{theview}}">Dispositivos</a>
+</li>
+<li><a class="colll" href="#/plays/{{theview}}">Reproducciones</a>
+</li> -->
+<li><a class="colll" href="#/viewstotal">Consumo total
+</a></li>
+<li><a class="colll" href="#/users">Usuarios</a>
+</li>
+</ul>
+<li><a class="colll" href="#/profile"><span class="glyphicon  glyphicon-envelope text-info"></span> Mi cuenta</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/profile"> Perfil</a>
+</li>
+<li><a class="colll" href="#/pagos"> Pagos </a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+
+
+
+<div class="col-md-offset-2 col-md-10 main">
+
+
+<ul class="row">
+
+<div class="theul col-xs-8 col-xs-offset-1">
+
+      <form method="post" ng-submit="savetime()">
+<!--         <h3 class="text-center"> Corte de comerciales: <a href="#/elprograma/{{theurl2}}">{{thename}}</a> </h3>
+        <br> -->
+  <!--           <div class="form-group col-xs-12">
+          <label class="control-label"><i class="ion-person"></i> Enlace a video</label>
+          <input type="text" class="form-control" ng-model="thisds" />
+        </div> -->
+<br>
+          <div class="fixpos">
+        <a ng-click="getpos()" class="getpos">duplicate</a>
+        <a ng-click="getpos2()" class="getpos2">quitar</a>
+         <div id="myElement6" class=" "></div>
+          </div>
+
+<!--         <h4 class="text-center">Formato: HH:MM:SS</h4> -->
+        <br><br>
+
+<div class="fixpox2">
+        <br><p>Bloke 1</p>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i>Corte Inicio</label>
+          <input type="text" min="0" class="form-control" 
+          ng-model="myuniques4[0]"></input>
+          <a href="" ng-click="show1()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i>Corte fin</label>
+          <input type="text"  min="0" class="form-control" 
+          ng-model="myuniques4[1]" />
+          <a href="" ng-click="show2()">show</a>
+        </div>
+
+        <br><br><p>Bloke 2</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" min="0" class="form-control" 
+          ng-model="myuniques4[2]" />
+          <a href="" ng-click="show3()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" min="0" class="form-control" 
+          ng-model="myuniques4[3]" />
+          <a href="" ng-click="show4()">show</a>
+        </div>
+
+
+
+        <br><br><p>Bloke 3</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text"  min="0" class="form-control" 
+          ng-model="myuniques4[4]" />
+          <a href="" ng-click="show5()">show</a>          
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[5]" />
+          <a href="" ng-click="show6()">show</a>                    
+        </div>
+
+
+
+        <br><br><p>Bloke 4</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[6]" />
+          <a href="" ng-click="show7()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[7]" />
+          <a href="" ng-click="show8()">show</a>
+        </div>
+
+        <br><br><p>Bloke 5</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[8]" />
+          <a href="" ng-click="show9()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[9]" />
+          <a href="" ng-click="show10()">show</a>
+        </div>
+
+        <br><br><p>Bloke 6</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[10]" />
+          <a href="" ng-click="show11()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[11]" />
+          <a href="" ng-click="show12()">show</a>
+        </div>
+
+        <br><br><p>Bloke 7</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[12]" />
+          <a href="" ng-click="show13()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[13]" />
+          <a href="" ng-click="show14()">show</a>
+        </div>
+
+        <br><br><p>Bloke 8</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[14]" />
+          <a href="" ng-click="show15()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[15]" />
+          <a href="" ng-click="show16()">show</a>
+        </div>
+
+        <br><br><p>Bloke 9</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[16]" />
+          <a href="" ng-click="show17()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[17]" />
+          <a href="" ng-click="show18()">show</a>
+        </div>
+
+        <br><br><p>Bloke 10</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[18]" />
+          <a href="" ng-click="show19()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[19]" />
+          <a href="" ng-click="show20()">show</a>
+        </div>
+
+        <br><br><p>Bloke 11</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[20]" />
+          <a href="" ng-click="show21()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[21]" />
+          <a href="" ng-click="show22()">show</a>
+        </div> 
+
+        <br><br><p>Bloke 12</p>        
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Inicio</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[22]" />
+          <a href="" ng-click="show23()">show</a>
+        </div>
+
+        <div class="form-group col-xs-6">
+          <label class="control-label"><i class="ion-person"></i> Corte Fin</label>
+          <input type="text" placeholder="00:00:00" min="0" class="form-control" 
+          ng-model="myuniques4[23]" />
+          <a href="" ng-click="show24()">show</a>
+        </div>                                                               
+
+<br><br><br>
+
+
+        <div class="form-group">
+          <button class="btn btn-success col-xs-3">Guardar</button>
+        </form>
+        </div>
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+</div><!--second-->
+
+

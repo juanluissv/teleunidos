@@ -1,0 +1,292 @@
+<div class="landingmenu2 row navbar navbar-default 
+navbar-fixed-top">
+<p class="col-md-3 menulogo2">
+<a href="#/dash" class="colwhite2">
+    &nbsp TELEUNIDOS
+</a></p>
+<div class="col-md-7">
+
+</div>
+</div>
+<div class="row">
+
+
+
+
+<div class="col-md-2 sidebar">
+<ul class="nav">
+<br>
+<!-- <li>
+<a href="#/dash" class="colll">
+<span class="glyphicon glyphicon-dashboard   text-info">
+</span> Dashboard</a>
+</li> -->
+<li><a class="colll" href="#/users">
+<span class ="glyphicon glyphicon-user text-primary"></span> Audiencia
+ </a>
+</li>
+<li>
+<a class="colll" href="#/miscampanas">
+<span 
+class="glyphicon glyphicon-dashboard text-success"></span> Campañas</a>
+</li>
+<li>
+<a class="colll" href="#/misvideos"><span class="glyphicon glyphicon-picture text-danger"></span> Mis Videos</a>
+</li>
+
+<li><a class="colll" href="#/impresiones">
+<span class="glyphicon glyphicon-signal text-warning">
+</span> Reportes</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/impresiones">Impresiones</a>
+</li>
+<li><a class="colll" href="#/clicks">Clicks</a>
+</li>
+<li><a class="colll" href="#/costoclicks">Costo por click</a>
+</li>
+<li><a class="colll" href="#/clickrate">Click Rate
+</a></li>
+
+</ul>
+<li><a class="colll" href="#/profile"><span class="glyphicon  glyphicon-envelope text-info"></span> Mi cuenta</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/profile"> Perfil</a>
+</li>
+<li><a class="colll" href="#/pagos"> Pagos </a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+<br><br><br><br>
+	<div class="col-md-offset-2  col-lg-5">
+<!-- <h3 class="text-center">Video de esta Campaña</h3> --> 
+<h3 class="col-md-10 text-center">{{campana[0].nombre}}</h3>
+
+
+<br><br><br><br>
+
+<div id="myElement6"></div>
+<br>
+<!--  <p class="text-left">Enlace: <a href="{{campana[0].enlace}}">{{campana[0].enlace}}</a></p>
+ -->	</div>
+
+
+
+<div class="col-md-5">
+
+<br>
+
+
+<a href="#/editcampana/{{thetag}}" class="col-md-offset-4 col-md-4 btn btn-primary">
+Modificar</a>
+<br><br><br>
+
+
+
+<div class="col-lg-4">
+		<div class="panel panel-danger">
+		<div class="panel-heading text-center">
+		<th>Presupuesto</th>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="table-responsive">
+		<table class="table">
+		<tbody>
+		<tr>
+		<td class="text-center">{{campana[0].presupuesto}}</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<!-- /.table-responsive -->
+		<!-- /.panel-body -->
+		</div>
+	</div>
+
+
+
+<div class="col-lg-4">
+		<div class="panel panel-info">
+		<div class="panel-heading text-center">
+		<th>Impresiones</th>
+		</div>
+
+		<div class="table-responsive">
+		<table class="table">
+		<tbody>
+		<tr>
+		<td class="text-center">
+		<a href="#/impresion/{{campana[0].tag}}">
+		{{myimpressions}}
+		</a>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		</div>
+	</div>		
+
+
+<div class="col-lg-4">
+		<div class="panel panel-warning">
+		<div class="panel-heading text-center">
+		<th>Clicks</th>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="table-responsive">
+		<table class="table">
+		<tbody>
+		<tr>
+		<td class="text-center">
+		<a href="#/click/{{campana[0].tag}}">
+		{{myclicks}}
+		</td>
+		</a>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<!-- /.table-responsive -->
+		<!-- /.panel-body -->
+		</div>
+	</div>	
+
+
+<div class="col-lg-4">
+		<div class="panel panel-success">
+		<div class="panel-heading text-center">
+		<th>Costo Unidad</th>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="table-responsive">
+		<table class="table">
+		<tbody>
+		<tr>
+		<td class="text-center">
+		<a href="#/impresion/{{campana[0].tag}}">
+		{{cpm}}</a></td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<!-- /.table-responsive -->
+		<!-- /.panel-body -->
+		</div>
+	</div>	
+
+<div class="col-lg-4">
+		<div class="panel panel-danger">
+		<div class="panel-heading text-center">
+		<th>Click rate</th>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="table-responsive">
+		<table class="table">
+		<tbody>
+		<tr>
+		<td class="text-center">
+		<a href="#/rate/{{campana[0].tag}}">
+		{{rate}}%
+		</a>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<!-- /.table-responsive -->
+		<!-- /.panel-body -->
+		</div>
+	</div>	
+
+	
+
+<div class="col-lg-4">
+		<div class="panel panel-success">
+		<div class="panel-heading text-center">
+		<th>Costo por click</th>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="table-responsive">
+		<table class="table">
+		<tbody>
+		<tr>
+		<td class="text-center">
+		<a href="#/costoclick/{{campana[0].tag}}">
+		{{costclicks}}</a></td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<!-- /.table-responsive -->
+		<!-- /.panel-body -->
+		</div>
+	</div>		
+
+<div class="col-lg-4">
+		<div class="panel panel-primary">
+		<div class="panel-heading text-center">
+		<th>Ciudad</th>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="table-responsive">
+		<table class="table">
+		<tbody>
+		<tr>
+		<td class="text-center">{{campana[0].ciudad}}</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<!-- /.table-responsive -->
+		<!-- /.panel-body -->
+		</div>
+	</div>	
+
+<div class="col-lg-4">
+		<div class="panel panel-info">
+		<div class="panel-heading text-center">
+		<th>Nacionalidad</th>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="table-responsive">
+		<table class="table">
+		<tbody>
+		<tr>
+		<td class="text-center">{{campana[0].nacionalidad}}</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<!-- /.table-responsive -->
+		<!-- /.panel-body -->
+		</div>
+	</div>	
+
+<div class="col-lg-4">
+		<div class="panel panel-warning">
+		<div class="panel-heading text-center">
+		<th>Canal</th>
+		</div>
+		<!-- /.panel-heading -->
+		<div class="table-responsive">
+		<table class="table">
+		<tbody>
+		<tr>
+		<td class="text-center">{{campana[0].canal}}</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<!-- /.table-responsive -->
+		<!-- /.panel-body -->
+		</div>
+	</div>			
+
+
+
+</div>
+

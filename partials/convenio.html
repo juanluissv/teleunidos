@@ -1,0 +1,227 @@
+<div class="landingmenu2 row navbar navbar-default 
+navbar-fixed-top">
+<p class="col-md-3 menulogo2">
+<img src="" class="imgsmall" alt="">
+<a href="#/dash" class="colwhite2">
+    &nbsp TELEUNIDOS
+</a></p>
+<div class="col-md-7">
+
+</div>
+</div>
+
+
+
+<div class="col-md-2 sidebar">
+<ul class="nav">
+<li>
+<a href="#/dash" class="collll">
+<span class="glyphicon glyphicon-dashboard   text-info">
+</span> Dashboard</a>
+</li>
+<!-- <li>
+<a class="colll" href="#/copyright">
+<span 
+class="glyphicon glyphicon-play-circle text-warning"></span> Control de Copyrigth</a>
+</li> -->
+<li>
+<a class="colll" href="#/misprogramas/{{thecanal}}"><span class="glyphicon glyphicon-picture
+ text-warning"></span> Mis Programas</a>
+</li>
+<li ng-show="!productor">
+<a class="colll" href="#/schedules/{{thecanal}}">
+<span 
+class="glyphicon glyphicon-list-alt text-primary"></span> Horarios</a>
+</li>
+<li ng-show="!productor">
+<a class="colll" href="#/{{thecanal}}"><span class="glyphicon glyphicon-play-circle text-danger"></span> Transmision</a>
+</li>
+<li><a class="colll" href="#/miscampanas/{{thecanal}}"><span class="glyphicon  glyphicon-record text-info"></span> Publicidad</a></li>
+
+<li><a class="colll" href="#/minutos/{{thecanal}}">
+<span class="glyphicon glyphicon-signal text-success">
+</span> Mis Datos</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/minutos/{{thecanal}}">Minutos Vistos</a>
+</li>
+<!-- <li><a class="colll" href="#/devices/{{theview}}">Dispositivos</a>
+</li>
+<li><a class="colll" href="#/plays/{{theview}}">Reproducciones</a>
+</li> -->
+<li><a class="colll" href="#/viewstotal/{{thecanal}}">Consumo total
+</a></li>
+<li><a class="colll" href="#/users">Usuarios</a>
+</li>
+</ul>
+<li><a class="colll" href="#/profile"><span class="glyphicon  glyphicon-envelope text-info"></span> Mi cuenta</a>
+<ul class="nav nav-second-level">
+<li><a class="colll" href="#/profile"> Perfil</a>
+</li>
+
+<li><a class="colll" ng-show="terminos"  href="#/acuerdo"> Convenio</a></li>
+<li><a class="colll" ng-show="!terminos" href="#/convenio"> Convenio</a></li>
+<li><a class="colll" href="#/pagos/{{thecanal}}"> Pagos </a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+
+
+
+<div class="col-md-offset-2 col-md-10 main">
+
+
+<ul class="row">
+
+<div class="theul col-xs-12 col-xs-offset-1">
+
+      <form method="post" ng-submit="updateProfile()">
+<div class="col-xs-10">    <br>
+
+        <h4 class="text-center">   ACUERDO DE COLABORACIÓN ENTRE {{thecanal}} Y TELEUNIDOS  </h4>
+<br>
+<p class="conven">
+<b>Nosotros: SMART INVESTMENT, S.A. DE C.V. con numero de identificacion tributaria cero seis uno cuatro guion cero uno uno cero uno tres guion uno cero cuatro guion uno, que en lo sucesivo se denominara: "Smart Investment" </b> y por otra parte <b> KORINVER S.A. DE C.V.</b>, con número de Identificación Tributaria: cero cinco uno uno guión cero cinco cero cinco uno cuatro guión uno cero uno guión cuatro, que en adelante se llamará: <b>"KORINVER”</b>, y ambas en conjunto denominadas: “LAS PARTES”, por este medio celebramos el presente ACUERDO DE COLABORACIÓN MUTUA, al que en adelante se podrá hacer referencia como: “EL PRESENTE ACUERDO”, el cual se regirá por las cláusulas siguientes: 
+</p>
+<p class="conven">
+<b>CLÁUSULA PRIMERA:</b> DECLARACIONES PRELIMINARES.
+Cada una de las partes declara que cuenta con la capacidad y autorizaciones necesarias para celebrar el presente acuerdo;
+Las partes se comprometen recíprocamente, a cumplir los términos del presente acuerdo de buena fe. Para los efectos de este acuerdo, se entiende que buena fe es la completa ausencia de obras fraudulentas, de engaño, reserva mental de todo tipo, en fin es que el obrar de las personas que actúan en sus negocios con máximos ánimos y espíritu de justicia, lealtad, probidad y equidad y del proceder del comerciante sumamente honesto, legal y cumplidor, esto es, que por encima de todo pone la honestidad, la lealtad y el espíritu de los negocios. Asimismo, para los efectos de esta cláusula se entiende que de mala fe obra quien pretende obtener ventajas o beneficios sin una suficiente dosis de probidad, contrariando los usos comerciales y las buenas costumbres.
+</p>
+<p class="conven">
+<b>CLAUSULA SEGUNDA:</b> OBJETO. 
+El objeto del presente acuerdo es establecer un marco de cooperación mutua y recíproca entre las partes, para el cumplimiento de una serie de objetivos comunes, cuyo objetivo general es transmitir contenidos  propiedad de
+ <b> {{thecanal}}, </b> por medio de la plataforma tecnológica denominada <b>“Teleunidos”</b> hacia el mercado de Salvadoreños en Estados unidos ofreciendo paquetes de canales, video en demanda y un servicio de alto valor al usuario final. Por su parte. 
+<b> {{thecanal}}, </b>  en su calidad de propietario de los contenidos tal y como se definen más adelante, otorga en este acto su autorización para la transmisión pública en señal cerrada por internet, de tales contenidos, otorgando en ese sentido una licencia ilimitada respecto de su propiedad intelectual sobre tales contenidos, en virtud de la cual cede y autoriza a <b>KORINVER</b>, el derecho a transmitir tales contenidos, así como los derechos económicos correspondientes, de conformidad a lo indicado en el presente convenio.
+</p>
+<p class="conven">
+<b>CLÁUSULA TERCERA:</b> DEFINICIONES. 
+Para los efectos del presente convenio, las partes establecen las siguientes definiciones: 
+<b>Korinver</b>: sociedad salvadoreña proveedora de los servicios de desarrollo de software y de video streaming.
+<b> {{thecanal}}, </b>  entidad salvadoreña generadora y proveedora de contenidos  para El Salvador.
+Contenidos: contenido  cuyos derechos de transmisión son propiedad de <b>{{thecanal}}. </b> 
+<b>Teleunidos</b>: sistema multiplataforma para la transmisión de contenido televisivo para el mercado de televidentes fuera de El Salvador.-
+Usuario: suscriptor que paga por el uso de <b>Teleunidos</b>
+Anuncios: publicidad que se muestra sobre el contenido mostrado en la plataforma y que es comercializado por 
+<b>Korinver </b> y <b> {{thecanal}} </b> 
+</p>
+<p class="conven">
+<b>CLÁUSULA CUARTA:</b> DISTRIBUCIÓN DE BENEFICIOS ECONÓMICOS. El presente acuerdo está sujeto a generar ciertos beneficios económicos a partir de los aportes de cada parte, esas fuentes de ingresos son: a) suscripciones de usuarios utilizando la plataforma y b) la venta anuncios comerciales. De estos ingresos, <b> {{thecanal}} </b>  tendrá beneficios equivalentes a la proporción del  tiempo que su contenido es visto con respecto a los otros productores de contenidos en la plataforma más un porcentaje por los anuncios que se transmiten sobre su contenido, <b>de conformidad con el siguiente detalle:</b>
+<br>
+
+<table style="width:100%" class="tab">
+  <tr class="tab">
+    <th class="tab"><b>Usuarios: &ensp;</b></th>
+    <th class="tab"><b>0 - 10,000</b></th> 
+    <th class="tab"><b>10,000 o más</b></th>
+  </tr>
+  <tr class="tab">
+    <td class="tab"><b>Subscripción:</b> &ensp;</td>
+    <td class="tab">Ingresos * 30% * (tiempo de minutos vistos del canal / tiempos de minutos vistos del total en la plataforma)
+    </td> 
+    <td class="tab">Ingresos * 40% * (minutos vistos del canal /  total minutos vistos del en la plataforma)
+</td>
+  </tr>
+  <tr class="tab">
+    <td class="tab"><b>Anuncios: </b>&ensp;</td>
+    <td class="tab">Ingresos del canal * 50% </td> 
+    <td class="tab">Ventas del canal * 60% </td>
+  </tr>
+</table>
+
+<br>
+
+
+La forma de pago de los beneficios antes indicados será la siguiente: transferencia bancaria o cheque.
+</p>
+<p class="conven">
+<b>CLÁUSULA QUINTA:</b> PLAZO. El presente acuerdo tendrá un plazo de un año, prorrogable por períodos iguales por medio de cruce de correspondencia.
+</p>
+<p class="conven">
+ <b>CLÁUSULA SEXTA:</b> RESPONSABILIDAD DE LAS PARTES.
+RESPONSABILIDAD DE LAS PARTES: <b>KORINVER</b> y <b> {{thecanal}} </b> , se encargarán de promover, por los medios que estimen convenientes, el servicio que será brindado, con el objetivo de generar entre los Clientes conocimiento acerca de los beneficios y ventajas brindadas con dicho servicio. En este esfuerzo, las partes podrán utilizar los logotipos de cada una, únicamente para los efectos contemplados en el presente acuerdo. 
+RESPONSABILIDAD DE <b>KORINVER</b>: 
+Transmitir los contenidos por medio de la plataforma <b>TELEUNIDOS</b>.
+Dar el total de minutos consumidos mensualmente y hacer el pago mensual de acuerdo a ese número de minutos.
+Informar inmediatamente de cualquier reclamo o acción legal recibida en relación con con la propiedad intelectual de los contenidos transmitidos por medio de <b>TELEUNIDOS</b>.
+
+RESPONSABILIDAD DE <b> {{thecanal}} </b> :
+Proporcionar los contenidos a ser transmitidos con  calidad y frecuencia y mantenerlos actualizados regularmente.
+Asumir la defensa y mantener indemne y a salvo a <b>KORINVER</b>, así como a sus accionistas y administradores, por acciones legales o reclamos de cualquier tipo y compensar por costa, reclamo, gasto, pago, multa, daños, acciones y obligaciones relacionadas con la propiedad intelectual de los contenidos transmitidos por medio de <b>TELEUNIDOS</b> y que le sea imputable.
+Informar de cualquier nuevo contenido que esté en desarrollo para poder ser considerado, dentro de la oferta de servicios para la plataforma <b>Teleunidos</b>.
+</p>
+<p class="conven">
+<b>CLÁUSULA SÉPTIMA:</b> CONFIDENCIALIDAD. <b>KORINVER</b> y <b> {{thecanal}}</b>  se obligan a guardar la confidencialidad,  el secreto comercial de los resultados que se obtengan de la ejecución del acuerdo, así como las informaciones que se le faciliten y toda otra que accidentalmente puedan llegar a obtener, que para la otra parte sea de forma estrictamente confidencial; responsabilidad que se mantendrá vigente durante el plazo del presente acuerdo y después de haberse dado por terminado el mismo indefinidamente, reservándose la misma y utilizándola única y exclusivamente para los fines que se expresan en este acuerdo y tomando las medidas necesarias para que su contenido no se divulgue a terceros, en especial, los métodos de trabajo, documentación técnica y todo aquello que sea propiedad intelectual o industrial de alguna de las partes. Además, las partes serán responsables del uso de la información proporcionada que hagan sus empleados dependientes o similares. <b>KORINVER</b> y 
+<b> {{thecanal}}, </b> garantizan que guardarán la confidencialidad establecida en esta cláusula.
+No se considerará confidencial la información que sea de conocimiento público o que sean hechos notorios que deban ser conocidos por todas las personas.
+Lo acordado en esta cláusula no será aplicable cuando la información sea requerida por autoridad competente en el ejercicio de sus funciones.
+</p>
+<p class="conven">
+<b>CLÁUSULA OCTAVA:</b> TERMINACIÓN DEL PRESENTE ACUERDO.  Las PARTES, de mutuo acuerdo o de forma unilateral, podrán dar por terminado el presente acuerdo; en caso que la terminación sea de forma unilateral, la parte que haya decidido dar por terminado el acuerdo informará por escrito a la otra parte por escrito su intención de darlo por terminado, este aviso se realizará con por lo menos treinta días de anticipación a la fecha en que se desea darlo por terminado. Salvo lo dispuesto en esta cláusula, la terminación del presente acuerdo se realizará sin ningún otro trámite, de pleno derecho y sin necesidad de requerimiento judicial.
+</p>
+<p class="conven">
+<b>CLÁUSULA NOVENA:</b> MODIFICACIÓN AL PRESENTE ACUERDO Y DOCUMENTOS CONTRACTUALES. Toda modificación del presente acuerdo deberá ser aceptada y firmado por las partes y se adjuntará al acuerdo, considerándose parte integrante del mismo. Serán documentos contractuales la aceptación de este convenio, así como cualquier otra correspondencia que se crucen las partes, en caso de contradicción entre los documentos contractuales y el presente instrumento, prevalecerá el presente instrumento.
+</p>
+<p class="conven">
+<b>CLÁUSULA DÉCIMA:</b> INEXISTENCIA DE EXCLUSIVIDAD. Nada de lo previsto en este Acuerdo impedirá a <b>KORINVER</b> y 
+<b> {{thecanal}}, </b>  negociar y celebrar acuerdos similares o proveer Servicios similares a cualquier otra persona o entidad.
+</p>
+<p class="conven">
+<b>CLÁUSULA DÉCIMA PRIMERA:</b> NOTIFICACIONES Y AVISOS. Todos los avisos, notificaciones y otras comunicaciones que se deban realizar como consecuencia de este Acuerdo deberán hacerse por escrito en Idioma Castellano, el cual para todos los efectos de este Acuerdo será considerado como el idioma oficial y deberán de entregarse: (i) mediante entrega de mano o medio electrónico, con acuse de recibo; (ii) mediante servicio de mensajería especializada, con porte prepagado y con acuse de recibo; o (iii) mediante correo certificado o registrado, con el sello del correo prepagado y con acuse de recibo, a las siguientes direcciones: (a) para <b>KORINVER:</b> en sus oficinas ubicadas en Urb. Joya de las Piletas, 5a. C.O. # 5-C, Nuevo Cuscatlán, La Libertad; </b> 
+Los representantes designados por las partes en la presente cláusula serán los interlocutores de cada una de las partes, para todos los aspectos relacionados con el presente acuerdo, lo anterior incluye de manera especial, toda notificación, aviso o comunicación entre <b>KORINVER</b> y <b> {{thecanal}}, </b>, que de cualquier forma modifique o se relacione con los aspectos legales del mismo, tales como pero sin limitarse a: objeto, plazos, cesión de derechos, garantías, terminación de acuerdo, solución de controversias, validez o interpretación del mismo. 
+</p>
+<p class="conven">
+<b>CLÁUSULA DÉCIMA SEGUNDA:</b> INVALIDEZ PARCIAL. En caso de que cualquiera de las clausulas sea declarada nula, invalida o inaplicable, el resto de cláusulas mantendrán su valor y obligatoriedad, por lo que los vacíos que pudieran quedar serán llenados de conformidad con la Ley aplicable.
+</p>
+<p class="conven">
+<b>CLAUSULA DECIMA TERCERA:</b> EXCEPCIONES. Cada parte tendrá derecho a conceder plazos o dispensas a su contraparte, pero el hecho de conceder esos plazos especiales o dispensas no implica renuncia a derecho alguno, a menos que así se indique expresamente.
+</p>
+<p class="conven">
+<b>CLAUSULA DECIMA CUARTA</b> PREVENCIÓN DE LAVADO DE DINERO Y DE ACTIVOS. Las partes declaran que, según su leal saber y entender, ninguno de los ingresos relacionados con el presente acuerdo tienen origen ilícito, ni se encuentran vinculados a actos reñidos con la Ley, especialmente los vinculados a lavado de dinero y de activos. Es especialmente convenido que cualquier información pública o privada, que pudiera afectar la reputación de cualquiera de las partes, en relación a lo acordado en la presente cláusula, será causal suficiente para dar por terminado el presente acuerdo, de manera unilateral y sin responsabilidad de la parte afectada.
+</p>
+<p class="conven">
+<b>CLAUSULA DECIMO QUINTA</b> RELACIÓN ENTRE LAS PARTES. Las PARTES declaran expresamente que se sujetan a las normas civiles y mercantiles, declarando expresamente que no existe dependencia laboral alguna, ni la conformación de una persona jurídica distinta de las que suscriben el presente acuerdo. En ese sentido, cada parte es laboralmente responsable de su propio personal y se comprometen mutuamente a sacarse a salvo e indemnes, de cualquier reclamación de tipo laboral, que sea interpuesta por el personal que cada parte haya contratado, respectivamente.
+</p>
+<p class="conven">
+<b>CLAUSULA DECIMO SEXTA</b> PROHIBICIÓN DE CESIÓN. Las PARTES convienen expresamente en que, ninguna de ellas podrá ceder o transferir, parcial o totalmente, los derechos y obligaciones derivados del presente Contrato a persona natural o jurídica alguna, sin autorización expresa mediante comunicado formal suscrito por el Representante Legal de la parte contraria expresando su conformidad en este sentido. De igual manera, las PARTES convienen expresamente en no contratar, bajo cualquier modalidad, al personal de su contraparte, durante la vigencia del presente Convenio.
+</p>
+<p class="conven">
+<b>CLAUSULA DECIMO SEPTIMA</b> INCUMPLIMIENTO El incumplimiento que incurriere una de las PARTES, respecto a una o varias de las cláusulas estipuladas en el presente Convenio, acarreará la consecuente indemnización a favor de la parte afectada, cuantificándose en función del perjuicio causado. 
+
+Todos los derechos y facultades que, en virtud del presente Convenio, asisten a las PARTES, permanecerán vigentes no obstante cualquier descuido, indulgencia o demora en exigir su cumplimiento. Por lo expuesto, bajo ninguna circunstancia se considerará que la parte que no hubiere exigido o reclamado el cumplimiento de una obligación o el ejercicio de un derecho, ha renunciado a tales derechos o a la facultad de exigir el cumplimiento de las estipulaciones contenidas en este Convenio, salvo el caso de que, por escrito de manera formal, constare su renuncia expresa a tales derechos y facultades. 
+</p>
+<p class="conven">
+<b>CLAUSULA DECIMO OCTAVA</b> CASO FORTUITO Y FUERZA MAYOR. Ninguna de las PARTES será responsable frente a la otra o frente a terceros, si por razones de caso fortuito o fuerza mayor debidamente comprobadas, alguna de las PARTES se viera imposibilitada de cumplir con las obligaciones estipuladas en el presente Convenio, comprometiéndose de manera expresa a cumplirla una vez superado el evento.
+</p>
+<p class="conven">
+<b>CLAUSULA DECIMO NOVENA</b> RESPONSABILIDAD FISCAL. Cada parte será responsable frente a las autoridades fiscales, del cumplimiento de sus propias obligaciones fiscales, tanto formales como de fondo, de conformidad con el régimen que le sea aplicable, tanto en El Salvador, como en los Estados Unidos de América.
+</p>
+<p class="conven">
+<b>CLAUSULA VIGESIMA</b>. LEGISLACIÓN, IDIOMA Y JURISDICCIÓN. Las partes manifiestan que se someten a la legislación salvadoreña y que para los efectos judiciales o extrajudiciales del presente acuerdo, ambas partes señalamos como domicilios especiales el de El Salvador, jurisdicción a cuyos tribunales nos sometemos en caso de acción judicial. El idioma oficial del presente acuerdo es el castellano y por ello prevalecerá sobre cualquier texto redactado en idioma distinto. Toda correspondencia surgida del presente acuerdo deberá ser redactada también en castellano.
+
+Así nos expresamos, ratificamos y firmamos el presente acuerdo por estar conforme a nuestras voluntades, y para constancia firmamos en la ciudad de San Salvador, en la fecha:
+<b>{{lafecha}}  </b>
+        </p>
+        <br><br>
+
+</div>
+      <div class="form-group">
+        <button class="btn btn-info col-xs-offset-3 col-xs-3"> 
+        Acepto los terminos </button>
+        </form>
+        </div>
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+

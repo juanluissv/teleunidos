@@ -1,0 +1,81 @@
+<div class="landingmenu2 row navbar navbar-default navbar-fixed-top">
+    <p class="col-md-3 menulogo2">
+    <img src="" class="imgsmall" alt="">
+    <a href="#/dash" class="colwhite2">
+        &nbsp {{nombre}} 
+    </a>
+    </p>
+</div>
+
+<div class="col-md-2 sidebar">
+    <ul class="nav">
+        <li>
+        <a href="#/dash" class="collll">
+        <span class="glyphicon glyphicon-dashboard   text-info">
+        </span> Dashboard</a>
+        </li>
+        <li>
+        <a class="colll" href="#/misprogramas/{{thecanal}}">
+        <span class="glyphicon glyphicon-picture text-warning"></span> TV Shows</a>
+        </li>
+        <li ng-show="!productor" >
+        <a class="colll" href="#/elprograma4">
+        <span class="glyphicon glyphicon-play-circle text-danger"></span> Upload link</a>
+        </li>
+        <li><a class="colll" href="#/miscampanas/{{thecanal}}">
+        <span class="glyphicon  glyphicon-record text-info"></span> Advertisement </a>
+        </li>
+        <li><a class="colll" href="#/minutos/{{thecanal}}">
+        <span class="glyphicon glyphicon-signal text-success">
+        </span> Analytics </a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/minutos/{{thecanal}}">Time Watch</a>
+            </li>
+            <li><a class="colll" href="#/viewstotal/{{thecanal}}">Total Watch</a>
+            </li>
+            <li><a class="colll" href="#/users">Users</a>
+            </li>
+            </ul>
+        <li><a class="colll" href="#/profile">
+        <span class="glyphicon  glyphicon-envelope text-info"></span> Account</a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/profile"> Profile</a>
+            </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<div class="col-md-offset-2 col-md-10 main">
+    <div class="center-form panel ">
+        <div class="panel-body">
+        <br>
+        <div class=" col-md-12 goleft">
+        <br>
+        <tr>
+        <form id="uploadForm" action="" method="POST" enctype="multipart/form-data" >
+            <h3 class="text-center"> Choose one video and click Upload</h3>
+            <p class="text-center">Your Video will take some minutes to show while is been processed</p>
+            <fieldset class="text-center">
+            <label>Select video</label>
+            <input id="uploadFile" type="file" name="file" class="upbotton" />
+            <div id="uploadBar" style="width:480px; float:left; display:none; background:#FFF; margin:0 auto;">
+            <div id="uploadProgress" style="background:#ff2323; width:0px; height:18px;"></div></div>
+            <br><br>
+            <button type="submit" id="uploadButton" class="btn btn-info col-md-offset-1 thebutton otrob">Upload Video</button>
+            </fieldset>
+        </form>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <ul>
+            <li class="lines  col-xs-9" ng-repeat="video in results">
+            <a href="#/video/{{video.mediaid}}/{{elurl}}">
+            <img class="videoImg" ng-src="{{ video.image }}">
+            <p class="text-center">  {{ video.title }}</p>
+            </a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,210 @@
+<div class="landingmenu2 row navbar navbar-default navbar-fixed-top">
+    <p class="col-md-3 menulogo2">
+    <img src="https://png.icons8.com/color/1600/video-camera" class="imgsmall" alt="">
+    <a href="#/dash" class="colwhite2">
+        &nbsp {{nombre}} 
+    </a>
+    </p>
+</div>
+<div class="col-md-2 sidebar">
+    <ul class="nav">
+        <li>
+        <a href="#/dash" class="collll">
+        <span class="glyphicon glyphicon-dashboard   text-info">
+        </span> Dashboard</a>
+        </li>
+        <li>
+        <a class="colll" href="#/misprogramas/{{thecanal}}">
+        <span class="glyphicon glyphicon-picture text-warning"></span> TV Shows</a>
+        </li>
+        <li ng-show="!productor" >
+        <a class="colll" href="#/elprograma4">
+        <span class="glyphicon glyphicon-play-circle text-danger"></span> Upload link</a>
+        </li>
+        <li><a class="colll" href="#/miscampanas/{{thecanal}}">
+        <span class="glyphicon  glyphicon-record text-info"></span> Advertisement </a>
+        </li>
+        <li><a class="colll" href="#/minutos/{{thecanal}}">
+        <span class="glyphicon glyphicon-signal text-success">
+        </span> Analytics </a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/minutos/{{thecanal}}">Time Watch</a>
+            </li>
+            <li><a class="colll" href="#/viewstotal/{{thecanal}}">Total Watch</a>
+            </li>
+            <li><a class="colll" href="#/users">Users</a>
+            </li>
+            </ul>
+        <li><a class="colll" href="#/profile">
+        <span class="glyphicon  glyphicon-envelope text-info"></span> Account</a>
+            <ul class="nav nav-second-level">
+            <li><a class="colll" href="#/profile"> Profile</a>
+            </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<br>
+<h3 class="col-md-offset-2 col-md-5 text-center">{{campana[0].nombre}}</h3>
+    <div class="col-md-offset-2  col-sm-5"><br><br>
+        <div id="myElement6" class="vidwith"></div><br>	
+    </div>
+    <div class="col-sm-5 "><br><br>
+        <div class="col-sm-4 ">
+            <div class="panel panel-info">
+                <div class="panel-heading text-center">
+                <th>Empresa</th>
+                </div>
+                <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                <tr>
+                <td class="text-center">{{campana[0].empresa}}</td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 ">
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">
+                <th>Presupuesto</th>
+                </div>
+                <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                <tr>
+                <td class="text-center">$ {{campana[0].presupuesto}}</td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+            </div>
+	    </div>
+        <div class="col-sm-4 ">
+            <div class="panel panel-warning">
+                <div class="panel-heading text-center">
+                <th>Impresiones</th>
+                </div>
+                <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                <tr>
+                <td class="text-center">
+                {{myimpressions}}
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+            </div>
+	    </div>		
+        <div class="col-sm-4">
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">
+                <th>Fecha Inicio</th>
+                </div>
+                <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                <tr>
+                <td class="text-center">
+                {{campana[0].fechaInicial}}	
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+            </div>
+	    </div>	
+        <div class="col-sm-4">
+            <div class="panel panel-danger">
+                <div class="panel-heading text-center">
+                <th>Fecha Final</th>
+                </div>
+                <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                <tr>
+                <td class="text-center">
+                {{campana[0].fechaFinal}}	
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+            </div>
+	    </div>	
+        <div class="col-sm-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                <th>Ciudad Target</th>
+                </div>
+                <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                <tr>
+                <td class="text-center">{{campana[0].ciudad}}</td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+            </div>
+    	</div>
+        <div class="col-sm-4">
+            <div class="panel panel-warning">
+                <div class="panel-heading text-center">
+                <th>Clicks</th>
+                </div>
+                <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                <tr>
+                <td class="text-center">
+                {{myclicks}}
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+            </div>
+        </div>	
+        <div class="col-sm-4">
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">
+                <th>Costo por click</th>
+                </div>
+                <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                <tr>
+                <td class="text-center">
+                {{costclicks}}</td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+            </div>
+    	</div>		
+        <div class="col-sm-4">
+            <div class="panel panel-danger">
+                <div class="panel-heading text-center">
+                <th>Costo Impresion</th>
+                </div>
+                <div class="table-responsive">
+                <table class="table">
+                <tbody>
+                <tr>
+                <td class="text-center">
+                {{cpm}}</td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+            </div>
+	    </div>	
+    </div>
+
