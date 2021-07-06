@@ -6,7 +6,7 @@
 
 
 <p> Teleunidos is a Video Streaming application </p>
-<p> A Video CMS  dashboard that help users to upload, view and manage tv shows and  video content with the option to record and convert live streaming to video on demand, upload and link videos from other social media like facebook, manage video advertisings, and track miutes watch by show and in total 
+<p> With a Video CMS  dashboard that help users to upload, view and manage tv shows and  video content with the option to record and convert live streaming to video on demand, upload and link videos from other social media like facebook, manage video advertisings, and track miutes watch by show and in total 
 </p>
 <p>including white label video streaming applications for mobile and smart TV platforms </p>
 <p>Technology use:</p>
